@@ -1,78 +1,68 @@
 % !TeX root = ../thuthesis-example.tex
 
-\chapter{论文主要部分的写法}
 
-研究生学位论文撰写，除表达形式上需要符合一定的格式要求外，内容方面上也要遵循一些共性原则。
+%\chapter{论文主要部分的写法}
+\chapter{Introduction}
 
-通常研究生学位论文只能有一个主题(不能是几块工作拼凑在一起)，该主题应针对某学科领域中的一个具体问题展开深入、系统的研究，并得出有价值的研究结论。
-学位论文的研究主题切忌过大，例如，“中国国有企业改制问题研究”这样的研究主题过大，因为“国企改制”涉及的问题范围太广，很难在一本研究生学位论文中完全研究透彻。
+\section{Background}
+Representation learning \cite{bengio2013representation}, especially deep representation learning (or deep learning, DL), has become one of the most popular techniques since \citet{krizhevsky2012imagenet} developed a powerful deep neural network (DNN) that can significantly outperform shallow methods on ImageNet \cite{deng2009imagenet}. After that, DNN based methods have thrived in various machine learning domains, including computer vision \cite{simonyan2014very}, natural language processing \cite{kim-2014-convolutional}, recommendation \cite{cheng2016wide}, reinforcement learning \cite{silver2016mastering}, and so on. These works make a substantial progress in building better artifical intelligence (AI) applications by DNN. However, it remains elusive why DNN gains so much improvement with adding more layers of representations. This question encourages us to think of opening the black box of DNN.
 
+In statistical learning theory \cite{vapnik2013nature} and probably approximately correct (PAC) learning theory \cite{valiant1984theory}, a too complex model suffers from \emph{over-fitting} problem thus failing in out-of-sample test. Recent work challenged them when the so-called benign over-fitting is observed in practice. That is, a hierarchical representation learning model with the number of parameters much more than the samples, i.e., \emph{over-parametrized}, still generalizes well on numerous tasks. This phenomenon ignites a surge of research under the theme of rethinking the generalization of representation learning \cite{zhang2016understanding}. One pitfall of the traditional learning theory is the lacking consideration of the input data distribution. 
 
+Information theory \cite{cover1999elements} is a promising candidate for unveiling the black box in representation learning. A landmark in this line of research is using information bottleneck (IB) to model the learning process of DNN \cite{tishby2000information, tishby2015deep}. They utilized mutual information between the layers and the input and output variables to quantify DNN. It sheds light on characterizing generalization of representation learning by taking data distribution into account. After that, experiments showed that stochastic gradient descent (SGD) is capable of improving the generalization by compressing the redundant information contained in representations through the lens of IB \cite{shwartz2017opening}.
 
-\section{论文的语言及表述}
+In information theory, IB was originally proposed as a means of finding minimal sufficient statistics. The minimality term in IB originates from the principle of minimum description length. In the sense of representation learning, IB describes a trade-off between the representation minimality and sufficiency.  The minimality term naturally works for a regularization term that urges the representation to generalize better. This property encourages a series of works in adopting IB for better representation learning. For example, by parameterizing the IB by variational inference, variational information bottleneck was proposed for yielding better generalization performance and robustness to adversarial attack of DNN in image classification \cite{alemi2016deep}. For this reason, it is quite surprising to see how IB could be used for more applications beyond the simple image classification task. In fact, we shall see that we can utilize IB for debasing recommender system models with a novel VI based approach. 
 
-除国际研究生外，学位论文一律须用汉语书写。
-学位论文应当用规范汉字进行撰写，除古汉语研究中涉及的古文字和参考文献中引用的外文文献之外，均采用简体汉字撰写。
+Moreover, in this paper, we explore a new perspective of information bottleneck. We look into a novel information-theoretic generalization measure that is built upon the mutual information between the learned weight and the selected finite-sample dataset. With this measure, we propose a new information bottleneck, namely PAC-Bayes information bottleneck (PIB), and give an MCMC based solution for approximate inference of the optimal posterior.
 
-国际研究生一般应以中文或英文书写学位论文，格式要求同上。
-论文须用中文封面。
+\section{Representation learning}
+The success of machine learning algorithms heavily relies on the representation of data. Prior to the deep learning era, manual feature engineering is a necessary step for preprocessing the raw data and then completing effective machine learning. Representation learning, on the other hand, advocates to automatic learning of informative data representations when building classifiers or other predictors. These representations are encouraged to be informative to the underlying explanatory factors from inputs. As a result, they are expected to be useful for downstream tasks or further fine-tuned under supervision. Since then, the core concern is that how to design good objective functions for learning data representations.
 
-研究生学位论文是学术作品，因此其表述要严谨简明，重点突出，专业常识应简写或不写，做到立论正确、数据可靠、说明透彻、推理严谨、文字凝练、层次分明，避免使用文学性质的或带感情色彩的非学术性语言。
+Deep learning (DL) has drawn a great revolution in AI research in past ten years. While the depth is a key factors of the sucess of DL, it should be noted DL is still a subset of the conception of representation learning, in other words, we would prefer to call deep learning as \emph{deep representation learning} for preciseness. For example, Word2Vec was proposed to reduce the number of parameters required by the the re-use of parameters  \cite{mikolov2013distributed}. Unlike the common deep learning setting, this distributed representation learning paradigm does not have multiple layers.
 
-论文中如出现一个非通用性的新名词、新术语或新概念，需随即解释清楚。
+As the name indicates, one key characteristic of deep learning is its depth. Two high-level ideas are that the deep hierarchical architecture promotes the \emph{re-use} of features and improve the feature \emph{abstraction} at the tail near the final output \cite{bengio2013representation}. When the number of layers grows, the number of possible paths grows exponentially. This feature allows computational efficiency of DNN in the universal approximation of arbitrary functions. That is, using deeper models can reduce the number of units required to represent the desired function and can reduce the amount of generalization error \cite{goodfellow2016deep}. On the other hand, the hierarchy of features enables the composition of fundamental concepts towards abstract objects. Generally, more abstract features are more invariant to the local variation of inputs. The invariance thus allowing the excellent predictive power of learned representations. 
 
-
-
-\section{论文题目的写法}
-
-论文题目应简明扼要地反映论文工作的主要内容，力求精炼、准确，切忌笼统。
-论文题目是对研究对象的准确、具体描述，一般要在一定程度上体现研究结论，因此，论文题目不仅应告诉读者这本论文研究了什么问题，更要告诉读者这个研究得出的结论。
-例如：“在事实与虚构之间：梅乐、卡彭特、沃尔夫的新闻观”就比“三个美国作家的新闻观研究”更专业、更准确。
+However, beyond this perceptual understanding of DL, there are still questions waiting for answers. For example, why stochastic gradient descent (SGD) can encourage both efficient and effective training of DNNs? To what extent different batch size influences the generalization of the learned DNNs? On account of them, We follow the idea of casting our eyes on another toolkit, e.g., information theory, to help us understand and design representation learning algorithms throughout this paper.
 
 
+\section{Information bottleneck}
+In the learning problem, information theory provides a quantitative notion of ``relevant" information, defined by the mutual information $I(X;Y)$ as
+\begin{equation}
+    I(X;Y) \triangleq \int \int p(x,y) \log \frac{p(x,y)}{p(x)p(y)} dx dy.
+\end{equation}
+With the input feature $X$ and the target signal $Y$, our object of interest is to extract the information contained in $X$ that is relevant to the target $Y$ by an intermediate representation $T$, i.e., $I(X;Y)=I(T;Y)$.  It could be seen that a trivial way to obtain all the relevant information is just making $T$ an identical mapping. Under the context of information theory, this is often formulated as a ``rate distortion" problem that characterizes the tradeoff between the size of representation, and the average distortion of the reconstructed signal \cite{cover1999elements}. Apart from the target, we design another target to restrict the irrelevant information by minimizing the mutual information $I(X;T)$. We thus build an optimization problem
+\begin{equation} \label{eq:mss}
+    \min_T I(T;X), \ \text{s.t.} \ I(T;Y)=I(X;Y).
+\end{equation}
+By solving this problem, we obtain the \emph{simplest} representation of $X$ while still maintain all relevant information of $Y$. In statistical term, the obtained $T$ is thus called \emph{minimal sufficient statistics} (MSS).
 
-\section{摘要的写法}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.6\linewidth]{fig1.pdf}
+  \caption{A hierarchy of representations in DNN is formulated as a Markov chain, reproduced from \inlinecite{tishby2015deep}.}
+  \label{fig:hierarchy_dnn}
+\end{figure}
 
-论文摘要是对论文研究内容的高度概括，应具有独立性和自含性，即应是 一篇简短但意义完整的文章。
-通过阅读论文摘要，读者应该能够对论文的研究 方法及结论有一个整体性的了解，因此摘要的写法应力求精确简明。
-论文摘要 应包括对问题及研究目的的描述、对使用的方法和研究过程进行的简要介绍、 对研究结论的高度凝练等，重点是结果和结论。
+In this setting, we view the information processing of $X$ as a Markov chain that
+\begin{equation}
+ Y \to X \to T \to \hat{Y}.
+\end{equation}
+For a general distribution $p(X,Y)$, however, the MSS might even not exist and the problem in Eq. \eqref{eq:mss} becomes insolvable. On consideration of this challenge, \citet{tishby2000information} proposed a Lagrangian relaxation of the original problem, to build a bottleneck as
+\begin{equation}
+ \mathcal{L}_{\text{IB}} =  I(X;T) - \beta I(T;Y),
+\end{equation}
+where $\beta$ is Lagrangian multiplier operates a hyperparameter that controls the tradeoff of regularization and sufficiency.
 
-论文摘要切忌写成全文的提纲，尤其要避免“第 1 章……；第 2 章……；……”这样的陈述方式。
-
-
-
-\section{引言的写法}
-
-一篇学位论文的引言大致包含如下几个部分：
-1、问题的提出；
-2、选题背 景及意义；
-3、文献综述；
-4、研究方法；
-5、论文结构安排。
-\begin{itemize}
-  \item 问题的提出：要清晰地阐述所要研究的问题“是什么”。
-    \footnote{选题时切记要有“问题意识”，不要选不是问题的问题来研究。}
-  \item 选题背景及意义：论述清楚为什么选择这个题目来研究，即阐述该研究对学科发展的贡献、对国计民生的理论与现实意义等。
-  \item 文献综述：对本研究主题范围内的文献进行详尽的综合述评，“述”的同时一定要有“评”，指出现有研究状态，仍存在哪些尚待解决的问题，讲出自己的研究有哪些探索性内容。
-  \item 研究方法：讲清论文所使用的学术研究方法。
-  \item 论文结构安排：介绍本论文的写作结构安排。
-\end{itemize}
+When there are multiple layers of representations, this Markov chain is also extended such that $X \to T_1 \to T_2 \dots T_l$ as $l$ is the total number of layers, shown by Fig. \ref{fig:hierarchy_dnn}. According to the data processing inequality (DPI), we know that $I(T_1;X) \geq I(T_2;X) \geq \dots I(T_l;X)$.
 
 
 
-\section{正文的写法}
-
-本部分是论文作者的研究内容，不能将他人研究成果不加区分地掺和进来。
-已经在引言的文献综述部分讲过的内容，这里不需要再重复。
-各章之间要存在有机联系，符合逻辑顺序。
+\emph{in this work we focus on design principled information bottleneck method for representation learning. This method can also be applied for DNN with minimal adaptions in case of computational efficiency.}
 
 
+\section{Literature review}
 
-\section{结论的写法}
+\emph{Explaining deep learning through the lens of information}
 
-结论是对论文主要研究结果、论点的提炼与概括，应精炼、准确、完整，使读者看后能全面了解论文的意义、目的和工作内容。
-结论是最终的、总体的结论，不是正文各章小结的简单重复。
-结论应包括论文的核心观点，主要阐述作者的创造性工作及所取得的研究成果在本领域中的地位、作用和意义，交代研究工作的局限，提出未来工作的意见或建议。
-同时，要严格区分自己取得的成果与指导教师及他人的学术成果。
+\section{Thesis structure}
 
-在评价自己的研究工作成果时，要实事求是，除非有足够的证据表明自己的研究是“首次”、“领先”、“填补空白”的，否则应避免使用这些或类似词语。

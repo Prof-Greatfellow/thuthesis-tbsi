@@ -13,14 +13,15 @@
   % 输出格式
   %   选择打印版（print）或用于提交的电子版（electronic），前者会插入空白页以便直接双面打印
   %
-  output = print,
+  output = electronic,
+  language = english,
+  font = times,
   %
   % 标题
   %   可使用“\\”命令手动控制换行
   %
-  title  = {清华大学学位论文 \LaTeX{} 模板\\使用示例文档 v\version},
-  title* = {An Introduction to \LaTeX{} Thesis Template of Tsinghua
-            University v\version},
+  title  = {基于信息瓶颈的表征学习方法},
+  title* = {Information Bottleneck for Representation Learning: New Vision},
   %
   % 学位
   %   1. 学术型
@@ -45,7 +46,7 @@
   % 培养单位
   %   填写所属院系的全名
   %
-  department = {计算机科学与技术系},
+  department = {清华伯克利深圳学院},
   %
   % 学科
   %   1. 学术型学位
@@ -56,24 +57,24 @@
   %      不填写此项
   %   4. 本科生填写专业名称，第二学位论文需标注“（第二学位）”
   %
-  discipline  = {计算机科学与技术},
-  discipline* = {Computer Science and Technology},
+  discipline  = {数据科学与信息技术},
+  discipline* = {Data Science and Information Technology},
   %
   % 姓名
   %
-  author  = {薛瑞尼},
-  author* = {Xue Ruini},
+  author  = {王子丰},
+  author* = {Wang Zifeng},
   %
   % 指导教师
   %   中文姓名和职称之间以英文逗号“,”分开，下同
   %
-  supervisor  = {郑纬民, 教授},
-  supervisor* = {Professor Zheng Weimin},
+  supervisor  = {黄绍伦, 副教授},
+  supervisor* = {Professor Huang Shao-Lun},
   %
   % 副指导教师
   %
-  associate-supervisor  = {陈文光, 教授},
-  associate-supervisor* = {Professor Chen Wenguang},
+  associate-supervisor  = {Khalid M. Mosalam, 教授},
+  associate-supervisor* = {Professor Khalid M. Mosalam},
   %
   % 联合指导教师
   %
@@ -117,11 +118,11 @@
 % 表格中支持跨行
 \usepackage{multirow}
 
-% 固定宽度的表格。
+% 固定宽度的表格。放在 hyperref 之前的话，tabularx 里的 footnote 显示不出来。
 % \usepackage{tabularx}
 
 % 跨页表格
-\usepackage{longtable}
+% \usepackage{longtable}
 
 % 量和单位
 \usepackage{siunitx}
@@ -135,6 +136,7 @@
 % 顺序编码制
 \usepackage[sort]{natbib}
 \bibliographystyle{thuthesis-numeric}
+
 
 % 著者-出版年制
 % \usepackage{natbib}
@@ -156,6 +158,12 @@
 \graphicspath{{figures/}}
 
 % 数学命令
+\setmathfont{XITS Math}[
+  Scale = MatchUppercase ]
+\setmathfont{Latin Modern Math}[
+  range = {cal,bfcal},
+  Scale = MatchUppercase ]
+
 \newcommand\dif{\mathop{}\!\mathrm{d}}  % 微分符号
 
 % hyperref 宏包在最后调用
