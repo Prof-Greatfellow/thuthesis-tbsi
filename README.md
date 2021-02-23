@@ -13,6 +13,8 @@ ThuThesis修改版，适用于TBSI毕业论文的latex编写。
 
 请使用**XeLatex**编译器！PdfLatex无法编译。
 
+经测试可在**overleaf**上编译成功，**不**保证在任意设备的本地编译成功。😂
+
 
 
 ---
