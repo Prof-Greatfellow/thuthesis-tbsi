@@ -9,7 +9,9 @@
 
 ThuThesis修改版，适用于TBSI毕业论文的latex编写。  
 
-请使用XeLatex编译器！PdfLatex无法编译。
+示例请见``main.pdf``。原版ThuThesis手册请见``thuthesis.pdf``。
+
+请使用**XeLatex**编译器！PdfLatex无法编译。
 
 
 

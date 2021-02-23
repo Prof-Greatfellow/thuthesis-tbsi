@@ -2271,7 +2271,7 @@
     \cleardoublepage
     \def\thu@statement@name{声\hspace{2em}明}%
   \else
-    \def\thu@statement@name{声\hspace{1em}明}%
+    \def\thu@statement@name{声\hspace{1em}明\hspace{1em}Personal Statement}%
   \fi
   \let\thu@statement@file\@empty
   \kv@define@key{thu@statement}{page-style}{\thusetup{statement-page-style=##1}}%

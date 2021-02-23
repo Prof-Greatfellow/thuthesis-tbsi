@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Literature review}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Thesis structure}{1}{section.1.3}%
-\contentsline {chapter}{\numberline {Chapter 2}Variational information bottleneck}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {Chapter 2}Literature Review}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}插图}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}表格}{4}{section.2.2}%
 \contentsline {chapter}{\numberline {Chapter 3}When Information Bottleneck Meets Counterfactuals}{5}{chapter.3}%
@@ -22,7 +22,7 @@
 \contentsline {chapter}{Bibliography}{9}{section*.23}%
 \setcounter {tocdepth}{0}
 \contentsline {chapter}{Acknowledgements}{12}{section*.25}%
-\contentsline {chapter}{声\hspace {1em}明}{13}{section*.27}%
+\contentsline {chapter}{声\hspace {1em}明\hspace {1em}Personal Statement}{13}{section*.27}%
 \contentsline {chapter}{Resume and Academic Achievements}{14}{section*.28}%
 \contentsline {chapter}{指导小组学术评语}{15}{appendix*.33}%
 \contentsline {chapter}{答辩委员会决议书}{16}{appendix*.34}%
