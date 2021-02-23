@@ -7,7 +7,9 @@
 
 # ThuThesis-TBSI
 
-ThuThesis修改版，适用于TBSI毕业论文的latex编写。
+ThuThesis修改版，适用于TBSI毕业论文的latex编写。  
+
+请使用XeLatex编译器！PdfLatex无法编译。
 
 
 
