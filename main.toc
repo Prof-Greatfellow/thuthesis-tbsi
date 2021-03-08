@@ -19,7 +19,7 @@
 \contentsline {chapter}{\numberline {Chapter 5}Conclusion and Future Work}{8}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Summary}{8}{section.5.1}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{Bibliography}{9}{section*.23}%
+\contentsline {chapter}{References}{9}{section*.23}%
 \setcounter {tocdepth}{0}
 \contentsline {chapter}{Acknowledgements}{12}{section*.25}%
 \contentsline {chapter}{Personal Statement}{13}{section*.27}%

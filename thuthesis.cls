@@ -854,8 +854,8 @@
         \def\thu@denotation@name{Nomenclature}%
         \def\bibname{References}%
         \def\appendixname{Appendix}%
-        \def\thu@acknowledgements@name{Acknowledgements}%
-        \def\thu@resume@name{Resume and Research Achievements}%
+        \def\thu@acknowledgements@name{Acknowledgement}%
+        \def\thu@resume@name{Resume and Research Achievements during Study}%
       \fi
     \fi
   \fi
