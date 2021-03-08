@@ -1,7 +1,7 @@
-\contentsline {chapter}{摘\hskip 1em\relax 要}{I}{section*.9}%
-\contentsline {chapter}{Abstract}{II}{section*.11}%
-\contentsline {chapter}{Table of Contents}{III}{section*.13}%
-\contentsline {chapter}{Nomenclature}{IV}{section*.15}%
+\contentsline {chapter}{摘\hskip 1em\relax 要}{I}{section*.10}%
+\contentsline {chapter}{Abstract}{II}{section*.12}%
+\contentsline {chapter}{Table of Contents}{III}{section*.14}%
+\contentsline {chapter}{Nomenclature}{IV}{section*.16}%
 \contentsline {chapter}{\numberline {Chapter 1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Literature review}{1}{section.1.2}%
@@ -19,11 +19,11 @@
 \contentsline {chapter}{\numberline {Chapter 5}Conclusion and Future Work}{8}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Summary}{8}{section.5.1}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{References}{9}{section*.23}%
+\contentsline {chapter}{References}{9}{section*.24}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{Acknowledgements}{12}{section*.25}%
-\contentsline {chapter}{Personal Statement}{13}{section*.27}%
-\contentsline {chapter}{Resume and Research Achievements}{14}{section*.28}%
-\contentsline {chapter}{指导小组学术评语}{15}{appendix*.33}%
-\contentsline {chapter}{答辩委员会决议书}{16}{appendix*.34}%
+\contentsline {chapter}{Acknowledgement}{12}{section*.26}%
+\contentsline {chapter}{Personal Statement}{13}{section*.28}%
+\contentsline {chapter}{Resume and Research Achievements during Study}{14}{section*.29}%
+\contentsline {chapter}{指导小组学术评语}{15}{appendix*.34}%
+\contentsline {chapter}{答辩委员会决议书}{16}{appendix*.35}%
 \contentsfinish 

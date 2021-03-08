@@ -1143,7 +1143,7 @@
 \captionsetup{
   format         = hang,
   font           = thu,
-  labelsep       = quad,
+  labelsep       = space,
   aboveskip      = 6bp,
   belowskip      = 6bp,
   figureposition = bottom,
@@ -3160,6 +3160,15 @@
 \DeclareRobustCommand\env{\textsf}
 \DeclareRobustCommand\pkg{\textsf}
 \DeclareRobustCommand\cls{\textsf}
+
+%change the figure format
+\renewcommand{\thefigure}{\bfseries \thechapter-\arabic{figure}.} 
+\captionsetup[figure]{labelfont=bf,textfont={normalfont}}
+
+\renewcommand{\thetable}{\bfseries \thechapter-\arabic{table}.} 
+\captionsetup[table]{labelfont=bf,textfont={normalfont}}
+
+
 \sloppy
 \endinput
 %%

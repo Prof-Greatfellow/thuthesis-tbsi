@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 14:01
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,6 +1072,44 @@ LaTeX Info: Redefining \mathellipsis on input line 20.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(156.49014pt, 532.06656pt, 156.49014pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=540.60239pt
+* \textheight=532.06656pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=61.45789pt
+* \headheight=14.22636pt
+* \headsep=8.5359pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=56.9055pt
+* \marginparsep=14.22636pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ [2
+
+
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
 * h-part:(L,W,R)=(102.43008pt, 392.6477pt, 102.43008pt)
 * v-part:(T,H,B)=(156.49014pt, 546.29292pt, 142.26378pt)
 * \paperwidth=597.50787pt
@@ -1120,17 +1158,21 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 8.75735pt on input line 20.
 LaTeX Info: Redefining \mathellipsis on input line 20.
- [2
+ [3
 
 
 
 
-] (./data/committee.tex) [3
+] (./data/committee.tex [4
 
 
 
 
+]) [5
 
+
+]
+[6
 
 ]
 ! Undefined control sequence.
@@ -1153,14 +1195,13 @@ File: figures/scan-copyright.pdf Graphic file (type pdf)
 <use figures/scan-copyright.pdf, page 1>
 File: figures/scan-copyright.pdf Graphic file (type pdf)
 <use figures/scan-copyright.pdf, page 1>
-[4
+[7] [8
 
 ] (./data/abstract.tex
 LaTeX Info: Redefining \mathellipsis on input line 5.
 LaTeX Info: Redefining \mathellipsis on input line 21.
 LaTeX Info: Redefining \mathellipsis on input line 23.
  [1
-
 
 
 ]
@@ -1172,11 +1213,11 @@ LaTeX Info: Redefining \mathellipsis on input line 39.
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- (./data/denotation.tex [3
+ (./data/denotation.tex
+[3
 
 
-])
-[4
+]) [4
 
 
 ] (./data/chap01.tex
@@ -1305,15 +1346,15 @@ File: figures/scan-statement.pdf Graphic file (type pdf)
 
 ] (./main.aux (./bu.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 819F687DA3719080DA116CA3DC11E66D;4382.
+(rerunfilecheck)             Checksum: 528F20B494F281826AD6293422B70543;4537.
  ) 
 Here is how much of TeX's memory you used:
- 28939 strings out of 477401
- 590305 string characters out of 5835146
- 1298734 words of memory out of 5000000
- 47809 multiletter control sequences out of 15000+600000
- 548883 words of font info for 285 fonts, out of 8000000 for 9000
+ 28953 strings out of 477401
+ 590766 string characters out of 5835146
+ 1299849 words of memory out of 5000000
+ 47820 multiletter control sequences out of 15000+600000
+ 548899 words of font info for 287 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  109i,17n,134p,973b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (24 pages).
+Output written on main.pdf (28 pages).
