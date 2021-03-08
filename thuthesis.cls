@@ -852,7 +852,7 @@
         \def\thu@list@algorithm@name{List of Algorithms}%
         \def\listequationname{List of Equations}%
         \def\thu@denotation@name{Nomenclature}%
-        \def\bibname{Bibliography}%
+        \def\bibname{References}%
         \def\appendixname{Appendix}%
         \def\thu@acknowledgements@name{Acknowledgements}%
         \def\thu@resume@name{Resume and Research Achievements}%
