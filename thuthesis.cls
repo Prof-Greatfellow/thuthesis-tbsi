@@ -3162,12 +3162,11 @@
 \DeclareRobustCommand\cls{\textsf}
 
 %change the figure format
-\renewcommand{\thefigure}{\bfseries \thechapter-\arabic{figure}.} 
-\captionsetup[figure]{labelfont=bf,textfont={normalfont}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}} 
+\captionsetup[figure]{labelfont=bf,textfont={normalfont},labelsep=period}
 
-\renewcommand{\thetable}{\bfseries \thechapter-\arabic{table}.} 
-\captionsetup[table]{labelfont=bf,textfont={normalfont}}
-
+\renewcommand{\thetable}{\thechapter-\arabic{table}} 
+\captionsetup[table]{labelfont=bf,textfont={normalfont},labelsep=period}
 
 \sloppy
 \endinput
