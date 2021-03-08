@@ -829,7 +829,7 @@
   \else
     \ifthu@main@language@english
       \ctexset{
-        chapter/name   = {\chaptername \space},
+        chapter/name   = {},
       }%
       \def\indexname{Index}%
       \ifthu@degree@bachelor
@@ -1166,10 +1166,10 @@
 \fi
 \ctexset{%
   chapter = {
-    nameformat   = {\bfseries},
+    nameformat   = {\bfseries{Chapter}\ },
     numberformat = {},
     titleformat  = {\bfseries},
-    aftername    = :\enspace ,
+    aftername    = {\bfseries{:}\ } ,
     fixskip      = true,
     afterindent  = true,
     lofskip      = 0pt,

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 16:31
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1221,7 +1221,7 @@ LaTeX Info: Redefining \mathellipsis on input line 39.
 
 
 ] (./data/chap01.tex
-Chapter 1
+1
 File: figures//fig1.pdf Graphic file (type pdf)
 <use figures//fig1.pdf>
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 14
@@ -1260,7 +1260,7 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 
 
 ]) (./data/chap02.tex [2]
-Chapter 2
+2
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 12.74046pt on input line 8.
 File: example-image-a.pdf Graphic file (type pdf)
@@ -1293,11 +1293,11 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 4.84703pt on input line 81.
 ) (./data/chap03.tex [4]
-Chapter 3
+3
 [5
 
 ]) (./data/chap04.tex [6]
-Chapter 4
+4
 
 Overfull \hbox (54.37805pt too wide) in paragraph at lines 50--57
 [][] 
@@ -1306,7 +1306,7 @@ Overfull \hbox (54.37805pt too wide) in paragraph at lines 50--57
 ) (./data/chap05.tex [7
 
 ]
-Chapter 5
+5
 ) [8
 
 ]
@@ -1346,12 +1346,12 @@ File: figures/scan-statement.pdf Graphic file (type pdf)
 
 ] (./main.aux (./bu.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 528F20B494F281826AD6293422B70543;4537.
+(rerunfilecheck)             Checksum: BBD105C81272AF229E53EB3A453C5D8C;4322.
  ) 
 Here is how much of TeX's memory you used:
  28953 strings out of 477401
  590766 string characters out of 5835146
- 1299849 words of memory out of 5000000
+ 1299791 words of memory out of 5000000
  47820 multiletter control sequences out of 15000+600000
  548899 words of font info for 287 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
