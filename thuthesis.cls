@@ -953,7 +953,7 @@
     \fancyfoot[C]{\wuhao\thepage}%
     \let\@mkboth\markboth
     \def\chaptermark##1{%
-      \markboth{\CTEXifname{\CTEXthechapter: \ }{}##1}{}%
+      \markboth{\CTEXifname{Chapter \CTEXthechapter:  }{}##1}{}%
     }%
   \fi
   \let\sectionmark\@gobble
