@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 19:23
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,77 +530,77 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 5
-54.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 7
+19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line
- 554.
+ 719.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 
-554.
+719.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(1)/m/n on input line 554.
+(Font)                  OT1/cmss/m/n --> TU/Arial(1)/m/n on input line 719.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(1)/b/n on input line 554.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(1)/b/n on input line 719.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/m/n on input line 554
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/m/n on input line 719
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/b/n on input line 554
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/b/n on input line 719
 .
+LaTeX Info: Redefining \mathellipsis on input line 755.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 596.
+(Font)              `operators' in the math version `normal' on input line 797.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular(1)/m/n on input lin
-e 596.
+e 797.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 596.
+(Font)              `operators' in the math version `bold' on input line 797.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular(1)/b/n on input li
-ne 596.
+ne 797.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 596.
+(Font)              `symbols' in the math version `normal' on input line 797.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular(2)/m/n on input li
-ne 596.
+ne 797.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 596.
+(Font)              `symbols' in the math version `bold' on input line 797.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular(2)/b/n on input li
-ne 596.
+ne 797.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 5
-96.
+(Font)              `largesymbols' in the math version `normal' on input line 7
+97.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/m/n on input li
-ne 596.
+ne 797.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 596
+(Font)              `largesymbols' in the math version `bold' on input line 797
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/b/n on input li
-ne 596.
+ne 797.
 \sym__um_fam1=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/m
-/n on input line 596.
+/n on input line 797.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/b
-/n on input line 596.
+/n on input line 797.
 LaTeX Info: The control sequence `\normalsize' is already robust on input line 
-733.
-LaTeX Info: Redefining \small on input line 735.
-LaTeX Info: Redefining \footnotesize on input line 746.
-LaTeX Info: Redefining \scriptsize on input line 757.
-LaTeX Info: Redefining \tiny on input line 758.
-LaTeX Info: Redefining \large on input line 759.
-LaTeX Info: Redefining \Large on input line 760.
-LaTeX Info: Redefining \LARGE on input line 761.
-LaTeX Info: Redefining \huge on input line 762.
-LaTeX Info: Redefining \Huge on input line 763.
-LaTeX Info: Redefining \mathellipsis on input line 1078.
-LaTeX Info: Redefining \boldsymbol on input line 1101.
+939.
+LaTeX Info: Redefining \small on input line 941.
+LaTeX Info: Redefining \footnotesize on input line 952.
+LaTeX Info: Redefining \scriptsize on input line 963.
+LaTeX Info: Redefining \tiny on input line 964.
+LaTeX Info: Redefining \large on input line 965.
+LaTeX Info: Redefining \Large on input line 966.
+LaTeX Info: Redefining \LARGE on input line 967.
+LaTeX Info: Redefining \huge on input line 968.
+LaTeX Info: Redefining \Huge on input line 969.
+LaTeX Info: Redefining \boldsymbol on input line 1142.
 \thu@stretch@box=\box63
 \thu@pad@box=\box64
 \c@thu@csl@count=\count313
@@ -609,6 +609,31 @@ LaTeX Info: Redefining \boldsymbol on input line 1101.
 \enitdp@achievements=\count316
 ) (./thusetup.tex
 LaTeX Info: Redefining \mathellipsis on input line 107.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/XITSMath-Regular(6)/m
+/n on input line 107.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/XITSMath-Regular(1)/b/n --> TU/XITSMath-Regular(6)/b
+/n on input line 107.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  TU/XITSMath-Regular(2)/m/n --> TU/XITSMath-Regular(7)/m
+/n on input line 107.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  TU/XITSMath-Regular(2)/b/n --> TU/XITSMath-Regular(7)/b
+/n on input line 107.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  TU/XITSMath-Regular(3)/m/n --> TU/XITSMath-Regular(8)/m
+/n on input line 107.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  TU/XITSMath-Regular(3)/b/n --> TU/XITSMath-Regular(8)/b
+/n on input line 107.
+\sym__um_fam2=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
+(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/m
+/n on input line 107.
+LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
+(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/b
+/n on input line 107.
 
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
@@ -708,30 +733,30 @@ LaTeX Font Info:    Font shape `TU/XITSMath(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
 (Font)              scaled to size 12.04701pt on input line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/XITSMath(1)/m/n on in
+(Font)                  TU/XITSMath-Regular(6)/m/n --> TU/XITSMath(1)/m/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/XITSMath-Regular(1)/b/n --> TU/XITSMath(1)/b/n on in
+(Font)                  TU/XITSMath-Regular(6)/b/n --> TU/XITSMath(1)/b/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  TU/XITSMath-Regular(2)/m/n --> TU/XITSMath(2)/m/n on in
+(Font)                  TU/XITSMath-Regular(7)/m/n --> TU/XITSMath(2)/m/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  TU/XITSMath-Regular(2)/b/n --> TU/XITSMath(2)/b/n on in
+(Font)                  TU/XITSMath-Regular(7)/b/n --> TU/XITSMath(2)/b/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  TU/XITSMath-Regular(3)/m/n --> TU/XITSMath(3)/m/n on in
+(Font)                  TU/XITSMath-Regular(8)/m/n --> TU/XITSMath(3)/m/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  TU/XITSMath-Regular(3)/b/n --> TU/XITSMath(3)/b/n on in
+(Font)                  TU/XITSMath-Regular(8)/b/n --> TU/XITSMath(3)/b/n on in
 put line 162.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 11.67648pt on input line 165.
-\sym__um_fam2=\mathgroup5
-LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
+\sym__um_fam3=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `normal'
 (Font)                  TU/LatinModernMath(0)/m/n --> TU/LatinModernMath(0)/m/n
  on input line 165.
-LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
+LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `bold'
 (Font)                  TU/LatinModernMath(0)/m/n --> TU/LatinModernMath(0)/b/n
  on input line 165.
 
@@ -997,7 +1022,6 @@ LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
 (Font)              scaled to size 9.55534pt on input line 16.
 LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
 (Font)              scaled to size 7.64427pt on input line 16.
-LaTeX Info: Redefining \mathellipsis on input line 20.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1065,7 +1089,6 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 
 
 ]
-LaTeX Info: Redefining \mathellipsis on input line 20.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1136,7 +1159,6 @@ LaTeX Info: Redefining \mathellipsis on input line 20.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \mathellipsis on input line 20.
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
 (Font)              scaled to size 15.05876pt on input line 20.
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
@@ -1157,7 +1179,6 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 14.59561pt on input line 20.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 8.75735pt on input line 20.
-LaTeX Info: Redefining \mathellipsis on input line 20.
  [3
 
 
@@ -1175,12 +1196,6 @@ LaTeX Info: Redefining \mathellipsis on input line 20.
 [6
 
 ]
-! Undefined control sequence.
-<argument> \thu@authorization@title 
-                                    
-l.27 \copyrightpage[file=scan-copyright.pdf]
-                                            
-? 
 File: figures/scan-copyright.pdf Graphic file (type pdf)
 <use figures/scan-copyright.pdf>
 File: figures/scan-copyright.pdf Graphic file (type pdf)
@@ -1195,18 +1210,12 @@ File: figures/scan-copyright.pdf Graphic file (type pdf)
 <use figures/scan-copyright.pdf, page 1>
 File: figures/scan-copyright.pdf Graphic file (type pdf)
 <use figures/scan-copyright.pdf, page 1>
-[7] [8
+ [7] [8
 
-] (./data/abstract.tex
-LaTeX Info: Redefining \mathellipsis on input line 5.
-LaTeX Info: Redefining \mathellipsis on input line 21.
-LaTeX Info: Redefining \mathellipsis on input line 23.
- [1
+] (./data/abstract.tex [1
 
 
-]
-LaTeX Info: Redefining \mathellipsis on input line 39.
-) [2
+]) [2
 
 
 ] (./main.toc)
@@ -1217,11 +1226,13 @@ LaTeX Info: Redefining \mathellipsis on input line 39.
 [3
 
 
-]) [4
+] [4]) [5
 
+
+] [6
 
 ] (./data/chap01.tex
-1
+Chapter 1
 File: figures//fig1.pdf Graphic file (type pdf)
 <use figures//fig1.pdf>
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 14
@@ -1258,9 +1269,8 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 5.35172pt on input line 14.
 [1
 
-
 ]) (./data/chap02.tex [2]
-2
+Chapter 2
 LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 12.74046pt on input line 8.
 File: example-image-a.pdf Graphic file (type pdf)
@@ -1293,20 +1303,20 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 4.84703pt on input line 81.
 ) (./data/chap03.tex [4]
-3
+Chapter 3
 [5
 
 ]) (./data/chap04.tex [6]
-4
+Chapter 4
 
-Overfull \hbox (54.37805pt too wide) in paragraph at lines 50--57
+Overfull \hbox (51.34325pt too wide) in paragraph at lines 50--57
 [][] 
  []
 
 ) (./data/chap05.tex [7
 
 ]
-5
+Chapter 5
 ) [8
 
 ]
@@ -1346,15 +1356,15 @@ File: figures/scan-statement.pdf Graphic file (type pdf)
 
 ] (./main.aux (./bu.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BBD105C81272AF229E53EB3A453C5D8C;4322.
+(rerunfilecheck)             Checksum: 2D0AFCF4E63F46EF1BC464F3BE721806;4459.
  ) 
 Here is how much of TeX's memory you used:
- 28953 strings out of 477401
- 590766 string characters out of 5835146
- 1299827 words of memory out of 5000000
- 47820 multiletter control sequences out of 15000+600000
+ 29030 strings out of 477401
+ 593144 string characters out of 5835146
+ 1324622 words of memory out of 5000000
+ 47899 multiletter control sequences out of 15000+600000
  548899 words of font info for 287 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  109i,17n,134p,973b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (28 pages).
+Output written on main.pdf (30 pages).
