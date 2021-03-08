@@ -829,7 +829,7 @@
   \else
     \ifthu@main@language@english
       \ctexset{
-        chapter/name   = \chaptername\space,
+        chapter/name   = {\chaptername \space},
       }%
       \def\indexname{Index}%
       \ifthu@degree@bachelor
@@ -845,7 +845,7 @@
         \def\thu@acknowledgements@name{ACKNOWLEDGEMENTS}%
         \def\thu@resume@name{PUBLICATIONS}%
       \else
-        \def\contentsname{Contents}%
+        \def\contentsname{Table of Contents}%
         \def\listfigurename{List of Figures}%
         \def\listtablename{List of Tables}%
         \def\thu@list@figure@table@name{List of Figures and Tables}%
@@ -855,7 +855,7 @@
         \def\bibname{Bibliography}%
         \def\appendixname{Appendix}%
         \def\thu@acknowledgements@name{Acknowledgements}%
-        \def\thu@resume@name{Resume and Academic Achievements}%
+        \def\thu@resume@name{Resume and Research Achievements}%
       \fi
     \fi
   \fi
@@ -1169,7 +1169,7 @@
     nameformat   = {\bfseries},
     numberformat = {},
     titleformat  = {\bfseries},
-    aftername    = :\ ,
+    aftername    = :\enspace ,
     fixskip      = true,
     afterindent  = true,
     lofskip      = 0pt,
@@ -1229,22 +1229,22 @@
   \else
     \ctexset{%
       chapter = {
-        format     = \centering\sffamily\sanhao,
+        format     = \centering \sffamily \sanhao,
         beforeskip = 27bp,
         afterskip  = 27bp,
       },
       section = {
-        format     = \sffamily\fontsize{14bp}{20bp}\selectfont,
+        format     = \rmfamily\fontsize{14bp}{20bp}\selectfont,
         beforeskip = 24bp,
         afterskip  = 6bp,
       },
       subsection = {
-        format     = \sffamily\fontsize{13bp}{20bp}\selectfont,
+        format     = \rmfamily\fontsize{13bp}{20bp}\selectfont,
         beforeskip = 12bp,
         afterskip  = 6bp,
       },
       subsubsection = {
-        format     = \sffamily\fontsize{12bp}{20bp}\selectfont,
+        format     = \rmfamily\fontsize{12bp}{20bp}\selectfont,
         beforeskip = 12bp,
         afterskip  = 6bp,
       },
@@ -1320,6 +1320,16 @@
   \fi
   \@starttoc{toc}%
 }
+% \thu@define@key{
+%   toc-chapter-style = {
+%     name = toc@chapter@style,
+%     choices = {
+%       arial,
+%       times,
+%     },
+%     default = arial,
+%   },
+% }
 \thu@define@key{
   toc-chapter-style = {
     name = toc@chapter@style,
@@ -1327,9 +1337,10 @@
       arial,
       times,
     },
-    default = arial,
+    default = times,
   },
 }
+
 \newcommand\thu@leaders{\titlerule*[4bp]{.}}
 \newcommand\thu@set@toc@format{%
   \contentsmargin{\z@}%
@@ -1370,17 +1381,29 @@
       \fi
     \fi
   \else
+    % \titlecontents{chapter}
+    %   [\z@]{\addvspace{6bp}\rmfamily \bfseries}
+    %   {\contentspush{\thecontentslabel\enspace}}{}
+    %   {\rmfamily\thu@leaders\thecontentspage}%
+    % \titlecontents{section}
+    %   [1em]{}
+    %   {\contentspush{\thecontentslabel\quad}}{}
+    %   {\thu@leaders\thecontentspage}%
+    % \titlecontents{subsection}
+    %   [2em]{}
+    %   {\contentspush{\thecontentslabel\quad}}{}
+    %   {\thu@leaders\thecontentspage}%
     \titlecontents{chapter}
-      [\z@]{\addvspace{6bp}\sffamily}
-      {\contentspush{\thecontentslabel\quad}}{}
-      {\rmfamily\thu@leaders\thecontentspage}%
+      [0em]{\addvspace{6bp} \bfseries}
+      {\contentspush{\thecontentslabel\enspace}}{}
+      {\thu@leaders\thecontentspage}%
     \titlecontents{section}
       [1em]{}
-      {\contentspush{\thecontentslabel\quad}}{}
+      {\contentspush{\thecontentslabel\enspace}}{}
       {\thu@leaders\thecontentspage}%
     \titlecontents{subsection}
       [2em]{}
-      {\contentspush{\thecontentslabel\quad}}{}
+      {\contentspush{\thecontentslabel\enspace}}{}
       {\thu@leaders\thecontentspage}%
   \fi
 }
@@ -2271,7 +2294,7 @@
     \cleardoublepage
     \def\thu@statement@name{声\hspace{2em}明}%
   \else
-    \def\thu@statement@name{声\hspace{1em}明\hspace{1em}Personal Statement}%
+    \def\thu@statement@name{Personal Statement}%
   \fi
   \let\thu@statement@file\@empty
   \kv@define@key{thu@statement}{page-style}{\thusetup{statement-page-style=##1}}%

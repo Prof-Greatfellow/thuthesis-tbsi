@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  23 FEB 2021 10:19
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  8 MAR 2021 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1305,14 +1305,14 @@ File: figures/scan-statement.pdf Graphic file (type pdf)
 
 ] (./main.aux (./bu.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 54A686CBD875C9D59ADE955241BD692A;4357.
+(rerunfilecheck)             Checksum: 9EE95ACD05059B1018F33E6D10FDFD0C;4392.
  ) 
 Here is how much of TeX's memory you used:
- 28942 strings out of 477401
- 590383 string characters out of 5835146
- 1298728 words of memory out of 5000000
- 47811 multiletter control sequences out of 15000+600000
- 548891 words of font info for 286 fonts, out of 8000000 for 9000
+ 28939 strings out of 477401
+ 590305 string characters out of 5835146
+ 1298738 words of memory out of 5000000
+ 47809 multiletter control sequences out of 15000+600000
+ 548883 words of font info for 285 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  109i,17n,134p,973b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
