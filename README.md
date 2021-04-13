@@ -7,6 +7,12 @@
 
 # ThuThesis-TBSI
 
+**[2021/3/8]** 模板更新后，请将`thusthesis.cls`中的代码复制后覆盖在项目的同名文件中，即可更新模板格式！
+
+**[2021/4/13]** 通过教务格式审核版本的更新！
+
+
+
 ThuThesis修改版，适用于TBSI毕业论文的latex编写。  
 
 示例请见``main.pdf``。原版ThuThesis手册请见``thuthesis.pdf``。
@@ -14,8 +20,6 @@ ThuThesis修改版，适用于TBSI毕业论文的latex编写。
 请使用**XeLatex**编译器！PdfLatex无法编译。
 
 经测试可在**overleaf**上编译成功，**不**保证在任意设备的本地编译成功。😂
-
-**[2021/3/8]** 模板更新后，请将`thusthesis.cls`中的代码复制后覆盖在项目的同名文件中，即可更新模板格式！
 
 ---
 

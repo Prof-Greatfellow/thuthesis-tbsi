@@ -1,15 +1,15 @@
-\contentsline {chapter}{摘\hskip 1em\relax 要}{I}{section*.9}%
-\contentsline {chapter}{Abstract}{II}{section*.11}%
-\contentsline {chapter}{Table of Contents}{III}{section*.13}%
-\contentsline {chapter}{List of Figures and Tables}{V}{section*.15}%
-\contentsline {chapter}{List of Symbols and Acronyms}{VI}{section*.17}%
+\contentsline {chapter}{摘\hskip 1em\relax 要}{I}{section*.10}%
+\contentsline {chapter}{Abstract}{II}{section*.12}%
+\contentsline {chapter}{Table of Contents}{III}{section*.14}%
+\contentsline {chapter}{List of Figures and Tables}{V}{section*.16}%
+\contentsline {chapter}{List of Symbols and Acronyms}{VI}{section*.18}%
 \contentsline {chapter}{\numberline {Chapter 1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Literature review}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Thesis structure}{1}{section.1.3}%
 \contentsline {chapter}{\numberline {Chapter 2}Literature Review}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}插图}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}表格}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.2}表格}{3}{section.2.2}%
 \contentsline {chapter}{\numberline {Chapter 3}When Information Bottleneck Meets Counterfactuals}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}数学符号}{5}{section.3.1}%
 \contentsline {section}{\numberline {3.2}数学公式}{5}{section.3.2}%
@@ -20,11 +20,11 @@
 \contentsline {chapter}{\numberline {Chapter 5}Conclusion and Future Work}{8}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Summary}{8}{section.5.1}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{References}{9}{section*.25}%
+\contentsline {chapter}{References}{9}{section*.26}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{Acknowledgements}{12}{section*.27}%
-\contentsline {chapter}{声\hspace {1em}明}{13}{section*.29}%
-\contentsline {chapter}{Resume}{14}{section*.30}%
-\contentsline {chapter}{Comments from Thesis Supervisor}{15}{appendix*.36}%
-\contentsline {chapter}{Resolution of Thesis Defense Committee}{16}{appendix*.37}%
+\contentsline {chapter}{Acknowledgements}{12}{section*.28}%
+\contentsline {chapter}{声\hspace {1em}明}{13}{section*.30}%
+\contentsline {chapter}{Resume}{14}{section*.31}%
+\contentsline {chapter}{Comments from Thesis Supervisor}{15}{appendix*.37}%
+\contentsline {chapter}{Resolution of Thesis Defense Committee}{16}{appendix*.38}%
 \contentsfinish 

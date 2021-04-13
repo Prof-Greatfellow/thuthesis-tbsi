@@ -23,7 +23,7 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}[2017/04/15]
 \ProvidesClass{thuthesis}
-[2020/10/14 7.1.0 Tsinghua University Thesis Template]
+[2021/04/03 7.2.2 Tsinghua University Thesis Template]
 \newcommand\thu@error[1]{%
   \ClassError{thuthesis}{#1}{}%
 }
@@ -56,7 +56,7 @@
 }
 \hyphenation{Thu-Thesis}
 \def\thuthesis{ThuThesis}
-\def\version{7.1.0}
+\def\version{7.2.2}
 \RequirePackage{kvdefinekeys}
 \RequirePackage{kvsetkeys}
 \RequirePackage{kvoptions}
@@ -64,8 +64,11 @@
   family=thu,
   prefix=thu@,
   setkeys=\kvsetkeys}
+\let\thu@setup@hook\@empty
 \newcommand\thusetup[1]{%
+  \let\thu@setup@hook\@empty
   \kvsetkeys{thu}{#1}%
+  \thu@setup@hook
 }
 \newcommand\thu@define@key[1]{%
   \kvsetkeys{thu@key}{#1}%
@@ -158,33 +161,37 @@
       english,
     },
   },
+  system = {
+    choices = {
+      auto,
+      mac,
+      unix,
+      windows,
+    },
+    default = auto,
+  },
   fontset = {
     choices = {
+      auto,
       windows,
       mac,
       ubuntu,
       fandol,
       none,
     },
-    default = none,
-  },
-  system = {
-    choices = {
-      mac,
-      unix,
-      windows,
-      auto,
-    },
     default = auto,
   },
   font = {
     choices = {
+      auto,
       times,
       termes,
+      stix,
       xits,
       libertinus,
+      newcm,
       lm,
-      auto,
+      newtx,
       none,
     },
     default = auto,
@@ -192,11 +199,11 @@
   cjk-font = {
     name = cjk@font,
     choices = {
+      auto,
       windows,
       mac,
       noto,
       fandol,
-      auto,
       none,
     },
     default = auto,
@@ -204,13 +211,16 @@
   math-font = {
     name = math@font,
     choices = {
-      xits,
+      auto,
       stix,
+      xits,
       libertinus,
+      newcm,
       lm,
+      newtx,
       none,
     },
-    default = xits,
+    default = auto,
   },
   math-style = {
     name = math@style,
@@ -219,7 +229,54 @@
       ISO,
       TeX,
     },
-    default = GB,
+  },
+  uppercase-greek = {
+    name = uppercase@greek,
+    choices = {
+      italic,
+      upright,
+    },
+  },
+  less-than-or-equal = {
+    name = leq,
+    choices = {
+      slanted,
+      horizontal,
+    },
+  },
+  integral = {
+    choices = {
+      upright,
+      slanted,
+    },
+  },
+  integral-limits = {
+    name = integral@limits,
+    choices = {
+      true,
+      false,
+    },
+  },
+  partial = {
+    choices = {
+      upright,
+      italic,
+    },
+  },
+  math-ellipsis = {
+    name = math@ellipsis,
+    choices = {
+      centered,
+      lower,
+      AMS,
+    },
+  },
+  real-part = {
+    name = real@part,
+    choices = {
+      roman,
+      fraktur,
+    },
   },
   output = {
     choices = {
@@ -253,7 +310,7 @@
 \else
   \PassOptionsToClass{openany}{book}
 \fi
-\PassOptionsToPackage{quiet}{fontspec}
+\PassOptionsToPackage{no-math}{fontspec}
 \LoadClass[a4paper,UTF8,zihao=-4,scheme=plain,fontset=none]{ctexbook}[2017/04/01]
 \RequirePackage{etoolbox}
 \RequirePackage{filehook}
@@ -263,7 +320,6 @@
 \RequirePackage{titletoc}
 \RequirePackage{notoccite}
 \RequirePackage{amsmath}
-\RequirePackage{unicode-math}
 \RequirePackage{graphicx}
 \RequirePackage[labelformat=simple]{subcaption}
 \RequirePackage{pdfpages}
@@ -293,11 +349,23 @@
     \RequirePackage{bibunits}
   }
 }
-\newcommand\thu@package@conflict[2]{
-  \AtBeginOfPackageFile*{#2}{
-    \thu@error{The "#2" package is incompatible with required "#1"}
-  }
+\newcommand\thu@package@conflict[2]{%
+  \AtEndOfPackageFile*{#1}{%
+    \AtBeginOfPackageFile*{#2}{%
+      \thu@error{The "#2" package is incompatible with "#1"}%
+    }%
+  }%
 }
+\thu@package@conflict{biblatex}{bibunits}
+\thu@package@conflict{biblatex}{chapterbib}
+\thu@package@conflict{biblatex}{cite}
+\thu@package@conflict{biblatex}{multibib}
+\thu@package@conflict{biblatex}{natbib}
+
+\thu@package@conflict{bibunits}{biblatex}
+\thu@package@conflict{bibunits}{chapterbib}
+\thu@package@conflict{bibunits}{multibib}
+
 \thu@package@conflict{unicode-math}{amscd}
 \thu@package@conflict{unicode-math}{amsfonts}
 \thu@package@conflict{unicode-math}{amssymb}
@@ -306,6 +374,64 @@
 \thu@package@conflict{unicode-math}{eucal}
 \thu@package@conflict{unicode-math}{eufrak}
 \thu@package@conflict{unicode-math}{mathrsfs}
+\thu@package@conflict{unicode-math}{newtxmath}
+\thu@package@conflict{unicode-math}{upgreek}
+
+\thu@package@conflict{natbib}{biblatex}
+\thu@package@conflict{natbib}{cite}
+
+\thu@package@conflict{newtxmath}{amsfonts}
+\thu@package@conflict{newtxmath}{amssymb}
+\thu@package@conflict{newtxmath}{unicode-math}
+\thu@package@conflict{newtxmath}{upgreek}
+\AtBeginOfPackageFile*{mathtools}{
+  \@ifpackageloaded{unicode-math}{
+    \thu@error{The "mathtools" package should be loaded before setting "math-font"}
+  }{}
+}%
+\AtBeginOfPackageFile*{amsthm}{
+  \@ifpackageloaded{newtxmath}{
+    \thu@error{The "amsthm" package should be loaded before setting "newtxmath"}
+  }{}
+}%
+\geometry{
+  paper          = a4paper,  % 210 * 297mm
+  marginparwidth = 2cm,
+  marginparsep   = 0.5cm,
+}
+\newcommand\thu@set@geometry{%
+  \ifthu@degree@bachelor
+    \geometry{
+      top        = 3.8cm,
+      bottom     = 3.2cm,
+      left       = 3.2cm,
+      right      = 3cm,
+      headheight = 0.5cm,
+      headsep    = 1.8cm,
+      footskip   = 1.45cm,
+    }%
+    \ifthu@output@print
+      \geometry{
+        left       = 3.2cm,
+        right      = 3cm,
+      }%
+    \else
+      \geometry{
+        hmargin    = 3cm,
+      }%
+    \fi
+  \else
+    \geometry{
+      margin     = 3cm,
+      headheight = 0.5cm,
+      headsep    = 0.3cm,
+      footskip   = 0.8cm,
+    }%
+  \fi
+}
+\thu@set@geometry
+\thu@option@hook{degree}{\thu@set@geometry}
+\thu@option@hook{output}{\thu@set@geometry}
 \thusetup{main-language=\thu@language}%
 \let\thu@main@language\thu@language
 \thu@option@hook{language}{%
@@ -456,106 +582,36 @@
 }
 \thu@set@punctuations
 \thu@option@hook{language}{\thu@set@punctuations}
-\geometry{
-  paper          = a4paper,  % 210 * 297mm
-  marginparwidth = 2cm,
-  marginparsep   = 0.5cm,
+\renewcommand\normalsize{%
+  \@setfontsize\normalsize{12bp}{20bp}%
+  \abovedisplayskip 6bp%
+  \abovedisplayshortskip 6bp%
+  \belowdisplayshortskip 6bp%
+  \belowdisplayskip \abovedisplayskip
 }
-\newcommand\thu@set@geometry{%
-  \ifthu@degree@bachelor
-    \geometry{
-      top        = 3.8cm,
-      bottom     = 3.2cm,
-      left       = 3.2cm,
-      right      = 3cm,
-      headheight = 0.5cm,
-      headsep    = 1.8cm,
-      footskip   = 1.45cm,
-    }%
-    \ifthu@output@print
-      \geometry{
-        left       = 3.2cm,
-        right      = 3cm,
-      }%
-    \else
-      \geometry{
-        hmargin    = 3cm,
-      }%
-    \fi
-  \else
-    \geometry{
-      margin     = 3cm,
-      headheight = 0.5cm,
-      headsep    = 0.3cm,
-      footskip   = 0.8cm,
-    }%
-  \fi
-}
-\thu@set@geometry
-\thu@option@hook{degree}{\thu@set@geometry}
-\thu@option@hook{output}{\thu@set@geometry}
-\def\cleardoublepage{%
-  \clearpage
-  \if@twoside
-    \ifthu@output@print
-      \ifodd\c@page
-      \else
-        \thispagestyle{empty}%
-        \hbox{}%
-        \newpage
-        \if@twocolumn
-          \hbox{}\newpage
-        \fi
-      \fi
-    \fi
-  \fi
-}
-\renewcommand\frontmatter{%
-  \cleardoublepage
-  \@mainmatterfalse
-  \pagenumbering{Roman}%
-}
-\renewcommand\mainmatter{%
-  \cleardoublepage
-  \@mainmattertrue
-  \pagenumbering{arabic}%
-}
-\renewcommand\backmatter{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
-  \@mainmatterfalse
-  \thusetup{toc-depth = 0}%
-}
-\ifthu@fontset@mac
-  \thusetup{
-    font     = times,
-    cjk-font = mac,
-  }
-\else
-  \ifthu@fontset@windows
-    \thusetup{
-      font     = times,
-      cjk-font = windows,
-    }
-  \else
-    \ifthu@fontset@fandol
-      \thusetup{
-        font     = termes,
-        cjk-font = fandol,
-      }
-    \else
-      \ifthu@fontset@ubuntu
-        \thusetup{
-          font     = termes,
-          cjk-font = noto,
-        }
-      \fi
-    \fi
-  \fi
+\normalsize
+\ifx\MakeRobust\@undefined \else
+    \MakeRobust\normalsize
 \fi
+\def\thu@def@fontsize#1#2{%
+  \expandafter\newcommand\csname #1\endcsname[1][1.3]{%
+    \fontsize{#2}{##1\dimexpr #2}\selectfont}}
+\thu@def@fontsize{chuhao}{42bp}
+\thu@def@fontsize{xiaochu}{36bp}
+\thu@def@fontsize{yihao}{26bp}
+\thu@def@fontsize{xiaoyi}{24bp}
+\thu@def@fontsize{erhao}{22bp}
+\thu@def@fontsize{xiaoer}{18bp}
+\thu@def@fontsize{sanhao}{16bp}
+\thu@def@fontsize{xiaosan}{15bp}
+\thu@def@fontsize{sihao}{14bp}
+\thu@def@fontsize{xiaosi}{12bp}
+\thu@def@fontsize{wuhao}{10.5bp}
+\thu@def@fontsize{xiaowu}{9bp}
+\thu@def@fontsize{liuhao}{7.5bp}
+\thu@def@fontsize{xiaoliu}{6.5bp}
+\thu@def@fontsize{qihao}{5.5bp}
+\thu@def@fontsize{bahao}{5bp}
 \ifthu@system@auto
   \IfFileExists{/System/Library/Fonts/Menlo.ttc}{
     \thusetup{system = mac}
@@ -571,53 +627,34 @@
     }
   }
 \fi
-\let\thu@font@family@xits\@empty
-\newcommand\thu@set@xits@names{%
-  \ifx\thu@font@family@xits\@empty
-    \IfFontExistsTF{XITSMath-Regular.otf}{%
-      \gdef\thu@font@family@xits{XITS}%
-      \gdef\thu@font@style@xits@rm{Regular}%
-      \gdef\thu@font@style@xits@bf{Bold}%
-      \gdef\thu@font@style@xits@it{Italic}%
-      \gdef\thu@font@style@xits@bfit{BoldItalic}%
-      \gdef\thu@font@name@xits@math{XITSMath-Regular}%
-    }{%
-      \gdef\thu@font@family@xits{xits}%
-      \gdef\thu@font@style@xits@rm{regular}%
-      \gdef\thu@font@style@xits@bf{bold}%
-      \gdef\thu@font@style@xits@it{italic}%
-      \gdef\thu@font@style@xits@bfit{bolditalic}%
-      \gdef\thu@font@name@xits@math{xits-math}%
-    }%
-  \fi
-}
-\let\thu@font@family@libertinus\@empty
-\newcommand\thu@set@libertinus@names{%
-  \ifx\thu@font@family@libertinus\@empty
-    \IfFontExistsTF{LibertinusSerif-Regular.otf}{%
-      \gdef\thu@font@family@libertinus@serif{LibertinusSerif}%
-      \gdef\thu@font@family@libertinus@sans{LibertinusSans}%
-      \gdef\thu@font@name@libertinus@math{LibertinusMath-Regular}%
-      \gdef\thu@font@style@libertinus@rm{Regular}%
-      \gdef\thu@font@style@libertinus@bf{Bold}%
-      \gdef\thu@font@style@libertinus@it{Italic}%
-      \gdef\thu@font@style@libertinus@bfit{BoldItalic}%
-    }{%
-      \gdef\thu@font@family@libertinus@serif{libertinusserif}%
-      \gdef\thu@font@family@libertinus@sans{libertinussans}%
-      \gdef\thu@font@name@libertinus@math{libertinusmath-regular}%
-      \gdef\thu@font@style@libertinus@rm{regular}%
-      \gdef\thu@font@style@libertinus@bf{bold}%
-      \gdef\thu@font@style@libertinus@it{italic}%
-      \gdef\thu@font@style@libertinus@bfit{bolditalic}%
-    }%
-  \fi
-}
-\ifthu@font@auto
-  \ifthu@system@unix
-    \thusetup{font=termes}
+\ifthu@fontset@auto
+  \ifthu@system@windows
+    \thusetup{fontset = windows}
   \else
+    \IfFontExistsTF{SimSun}{
+      \thusetup{fontset = windows}
+    }{
+      \ifthu@system@mac
+        \thusetup{fontset = mac}
+      \else
+        \IfFontExistsTF{Noto Serif CJK SC}{
+          \thusetup{fontset = ubuntu}
+        }{
+          \thusetup{fontset = fandol}
+        }
+      \fi
+    }
+  \fi
+\fi
+\ifthu@font@auto
+  \ifthu@fontset@windows
     \thusetup{font=times}
+  \else
+    \ifthu@fontset@mac
+      \thusetup{font=times}
+    \else
+      \thusetup{font=termes}
+    \fi
   \fi
 \fi
 \newcommand\thu@set@font@times{%
@@ -653,8 +690,52 @@
     BoldFont       = *-bold,
     ItalicFont     = *-italic,
     BoldItalicFont = *-bolditalic,
+    Scale          = MatchLowercase,
     Ligatures      = CommonOff,
   ]%
+}
+\let\thu@font@family@stix\@empty
+\newcommand\thu@set@stix@names{%
+  \ifx\thu@font@family@stix\@empty
+    \IfFontExistsTF{STIXTwoText-Regular.otf}{%
+      \gdef\thu@font@family@stix{STIXTwoText}%
+      \gdef\thu@font@name@stix@math{STIXTwoMath-Regular}%
+    }{%
+      \gdef\thu@font@family@stix{STIX2Text}%
+      \gdef\thu@font@name@stix@math{STIX2Math}%
+    }%
+  \fi
+}
+\newcommand\thu@set@font@stix{%
+  \thu@set@stix@names
+  \setmainfont{\thu@font@family@stix}[
+    Extension      = .otf,
+    UprightFont    = *-Regular,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+  ]%
+  \thu@set@texgyre@sans@mono
+}
+\let\thu@font@family@xits\@empty
+\newcommand\thu@set@xits@names{%
+  \ifx\thu@font@family@xits\@empty
+    \IfFontExistsTF{XITSMath-Regular.otf}{%
+      \gdef\thu@font@family@xits{XITS}%
+      \gdef\thu@font@style@xits@rm{Regular}%
+      \gdef\thu@font@style@xits@bf{Bold}%
+      \gdef\thu@font@style@xits@it{Italic}%
+      \gdef\thu@font@style@xits@bfit{BoldItalic}%
+      \gdef\thu@font@name@xits@math{XITSMath-Regular}%
+    }{%
+      \gdef\thu@font@family@xits{xits}%
+      \gdef\thu@font@style@xits@rm{regular}%
+      \gdef\thu@font@style@xits@bf{bold}%
+      \gdef\thu@font@style@xits@it{italic}%
+      \gdef\thu@font@style@xits@bfit{bolditalic}%
+      \gdef\thu@font@name@xits@math{xits-math}%
+    }%
+  \fi
 }
 \newcommand\thu@set@font@xits{%
   \thu@set@xits@names
@@ -666,6 +747,28 @@
     BoldItalicFont = *-\thu@font@style@xits@bfit,
   ]%
   \thu@set@texgyre@sans@mono
+}
+\let\thu@font@family@libertinus\@empty
+\newcommand\thu@set@libertinus@names{%
+  \ifx\thu@font@family@libertinus\@empty
+    \IfFontExistsTF{LibertinusSerif-Regular.otf}{%
+      \gdef\thu@font@family@libertinus@serif{LibertinusSerif}%
+      \gdef\thu@font@family@libertinus@sans{LibertinusSans}%
+      \gdef\thu@font@name@libertinus@math{LibertinusMath-Regular}%
+      \gdef\thu@font@style@libertinus@rm{Regular}%
+      \gdef\thu@font@style@libertinus@bf{Bold}%
+      \gdef\thu@font@style@libertinus@it{Italic}%
+      \gdef\thu@font@style@libertinus@bfit{BoldItalic}%
+    }{%
+      \gdef\thu@font@family@libertinus@serif{libertinusserif}%
+      \gdef\thu@font@family@libertinus@sans{libertinussans}%
+      \gdef\thu@font@name@libertinus@math{libertinusmath-regular}%
+      \gdef\thu@font@style@libertinus@rm{regular}%
+      \gdef\thu@font@style@libertinus@bf{bold}%
+      \gdef\thu@font@style@libertinus@it{italic}%
+      \gdef\thu@font@style@libertinus@bfit{bolditalic}%
+    }%
+  \fi
 }
 \newcommand\thu@set@font@libertinus{%
   \thu@set@libertinus@names
@@ -690,7 +793,30 @@
     BoldItalicFont = *-boldoblique,
   ]%
 }
-\@namedef{thu@set@font@lm}{%
+\newcommand\thu@set@font@newcm{%
+  \setmainfont{NewCM10}[
+    Extension      = .otf,
+    UprightFont    = *-Book,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-BookItalic,
+    BoldItalicFont = *-BoldItalic,
+  ]%
+  \setsansfont{NewCMSans10}[
+    Extension         = .otf,
+    UprightFont       = *-Book,
+    BoldFont          = *-Bold,
+    ItalicFont        = *-BookOblique,
+    BoldItalicFont    = *-BoldOblique,
+  ]%
+  \setmonofont{NewCMMono10}[
+    Extension           = .otf,
+    UprightFont         = *-Book,
+    ItalicFont          = *-BookItalic,
+    BoldFont            = *-Bold,
+    BoldItalicFont      = *-BoldOblique,
+  ]%
+}
+\newcommand\thu@set@font@lm{%
   \setmainfont{lmroman10}[
     Extension      = .otf,
     UprightFont    = *-regular,
@@ -713,102 +839,26 @@
     BoldItalicFont = *-boldoblique,
   ]%
 }
+\newcommand\thu@set@font@newtx{%
+  \RequirePackage{newtxtext}%
+}
 \newcommand\thu@set@font{%
   \@nameuse{thu@set@font@\thu@font}%
 }
 \thu@set@font
 \thu@option@hook{font}{\thu@set@font}
-\newcommand\thu@xits@integral@stylistic@set{%
-  \ifthu@math@style@TeX\else
-    8%
-  \fi
-}
-\newcommand\thu@set@math@style{%
-  \ifthu@math@style@TeX
-    \unimathsetup{
-      math-style = TeX,
-      bold-style = TeX,
-      partial    = italic,
-    }%
-  \else
-    \unimathsetup{
-      math-style = ISO,
-      bold-style = ISO,
-      partial    = upright,
-    }%
-  \fi
-  \ifthu@math@style@GB
-    \protected\def\le{\leqslant}%
-    \protected\def\ge{\geqslant}%
-    \DeclareRobustCommand\mathellipsis{\mathinner{\unicodecdots}}%
-  \else
-    \protected\def\le{\leq}%
-    \protected\def\ge{\geq}%
-    \DeclareRobustCommand\mathellipsis{\mathinner{\unicodeellipsis}}%
-  \fi
-}
-\ifthu@main@language@chinese
-  \thusetup{math-style=GB}%
-\else
-  \thusetup{math-style=TeX}%
-\fi
-\thu@set@math@style
-\thu@option@hook{math-style}{\thu@set@math@style}
-\thu@option@hook{main-language}{%
-  \ifthu@main@language@chinese
-    \thusetup{math-style=GB}%
-  \else
-    \thusetup{math-style=TeX}%
-  \fi
-}
-\newcommand\thu@set@math@font@xits{%
-  \thu@set@xits@names
-  \setmathfont{\thu@font@name@xits@math}[
-    Extension    = .otf,
-    StylisticSet = \thu@xits@integral@stylistic@set,
-  ]%
-  \setmathfont{\thu@font@name@xits@math}[
-    Extension    = .otf,
-    StylisticSet = 1,
-    range        = {cal,bfcal},
-  ]%
-}
-\newcommand\thu@set@math@font@stix{%
-  \setmathfont{STIX2Math}[
-    Extension    = .otf,
-    StylisticSet = \thu@xits@integral@stylistic@set,
-  ]%
-  \setmathfont{STIX2Math}[
-    Extension    = .otf,
-    StylisticSet = 1,
-    range        = {scr,bfscr},
-  ]%
-}
-\newcommand\thu@set@math@font@libertinus{%
-  \thu@set@libertinus@names
-  \setmathfont{\thu@font@name@libertinus@math .otf}%
-}
-\newcommand\thu@set@math@font@lm{%
-  \setmathfont{latinmodern-math.otf}%
-}
-\newcommand\thu@set@math@font{%
-  \@nameuse{thu@set@math@font@\thu@math@font}%
-}
-\thu@set@math@font
-\thu@option@hook{math-font}{\thu@set@math@font}
-\thu@option@hook{math-style}{\thu@set@math@font}
 \ifthu@cjk@font@auto
-  \ifthu@system@mac
+  \ifthu@fontset@mac
     \thusetup{cjk-font = mac}
   \else
-    \ifthu@system@windows
+    \ifthu@fontset@windows
       \thusetup{cjk-font = windows}
     \else
-      \IfFontExistsTF{Noto Serif CJK SC}{
+      \ifthu@fontset@ubuntu
         \thusetup{cjk-font = noto}
-      }{
+      \else
         \thusetup{cjk-font = fandol}
-      }
+      \fi
     \fi
   \fi
 \fi
@@ -823,70 +873,82 @@
   \setCJKfamilyfont{zhsong}{SimSun}[AutoFakeBold]%
   \setCJKfamilyfont{zhhei}{SimHei}[AutoFakeBold]%
   \setCJKfamilyfont{zhkai}{KaiTi}%
-  \IfFontExistsTF{FangSong_GB2312}{%
-    \setCJKfamilyfont{zhfs}{FangSong_GB2312}%
-  }{%
-    \setCJKfamilyfont{zhfs}{FangSong}%
-  }%
+  \setCJKfamilyfont{zhfs}{FangSong}%
 }
 \newcommand\thu@set@cjk@font@mac{%
+  \defaultCJKfontfeatures{}%
   \setCJKmainfont{Songti SC}[
     UprightFont    = * Light,
     BoldFont       = * Bold,
-    ItalicFont     = Kaiti SC,
+    ItalicFont     = Kaiti SC Regular,
     BoldItalicFont = Kaiti SC Bold,
   ]%
-  \setCJKsansfont{Heiti SC}[BoldFont=* Medium]%
+  \setCJKsansfont{Heiti SC}[
+    UprightFont    = * Light,
+    BoldFont       = * Medium,
+  ]%
   \setCJKmonofont{STFangsong}
   \setCJKfamilyfont{zhsong}{Songti SC}[
-    UprightFont = * Light,
-      BoldFont  = * Bold,
+    UprightFont    = * Light,
+    BoldFont       = * Bold,
   ]%
   \setCJKfamilyfont{zhhei}{Heiti SC}[
-    UprightFont = * Light,
-    BoldFont    = * Medium,
+    UprightFont    = * Light,
+    BoldFont       = * Medium,
   ]%
   \setCJKfamilyfont{zhfs}{STFangsong}%
-  \setCJKfamilyfont{zhkai}{Kaiti SC}[BoldFont = * Bold]%
+  \setCJKfamilyfont{zhkai}{Kaiti SC}[
+    UprightFont    = * Regular,
+    BoldFont       = * Bold,
+  ]%
   \setCJKfamilyfont{zhli}{Baoli SC}%
   \setCJKfamilyfont{zhyuan}{Yuanyi SC}[
-    UprightFont = * Light,
-    BoldFont    = * Bold,
+    UprightFont    = * Light,
+    BoldFont       = * Bold,
   ]%
 }
 \newcommand\thu@set@cjk@font@noto{%
+  \defaultCJKfontfeatures{}%
   \setCJKmainfont{Noto Serif CJK SC}[
     UprightFont    = * Light,
     BoldFont       = * Bold,
     ItalicFont     = FandolKai-Regular,
     ItalicFeatures = {Extension = .otf},
+    Script         = CJK,
   ]%
   \setCJKsansfont{Noto Sans CJK SC}[
-    BoldFont    = * Medium,
+    BoldFont       = * Medium,
+    Script         = CJK,
   ]%
-  \setCJKmonofont{Noto Sans Mono CJK SC}%
+  \setCJKmonofont{Noto Sans Mono CJK SC}[
+    Script         = CJK,
+  ]%
   \setCJKfamilyfont{zhsong}{Noto Serif CJK SC}[
-    UprightFont = * Light,
-    UprightFont = * Bold,
+    UprightFont    = * Light,
+    UprightFont    = * Bold,
+    Script         = CJK,
   ]%
   \setCJKfamilyfont{zhhei}{Noto Sans CJK SC}[
-    BoldFont    = * Medium,
+    BoldFont       = * Medium,
+    Script         = CJK,
   ]%
   \setCJKfamilyfont{zhfs}{FandolFang}[
-    Extension   = .otf,
-    UprightFont = *-Regular,
+    Extension      = .otf,
+    UprightFont    = *-Regular,
   ]%
   \setCJKfamilyfont{zhkai}{FandolKai}[
-    Extension   = .otf,
-    UprightFont = *-Regular,
+    Extension      = .otf,
+    UprightFont    = *-Regular,
   ]%
 }
 \newcommand\thu@set@cjk@font@fandol{%
+  \defaultCJKfontfeatures{}%
   \setCJKmainfont{FandolSong}[
     Extension   = .otf,
     UprightFont = *-Regular,
     BoldFont    = *-Bold,
     ItalicFont  = FandolKai-Regular,
+    ItalicFeatures = {Extension = .otf},
   ]%
   \setCJKsansfont{FandolHei}[
     Extension   = .otf,
@@ -927,65 +989,383 @@
 }
 \thu@set@cjk@font
 \thu@option@hook{cjk-font}{\thu@set@cjk@font}
-\renewcommand\normalsize{%
-  \@setfontsize\normalsize{12bp}{20bp}%
-  \abovedisplayskip 6bp%
-  \abovedisplayshortskip 6bp%
-  \belowdisplayshortskip 6bp%
-  \belowdisplayskip \abovedisplayskip
+\newcommand\thu@set@math@style{%
+  \ifthu@math@style@TeX
+    \thusetup{
+      uppercase-greek    = upright,
+      less-than-or-equal = horizontal,
+      integral           = slanted,
+      integral-limits    = false,
+      partial            = italic,
+      math-ellipsis      = AMS,
+      real-part          = fraktur,
+    }%
+  \else
+    \thusetup{
+      uppercase-greek = italic,
+      integral        = upright,
+      integral-limits = true,
+      partial         = upright,
+      real-part       = roman,
+    }%
+    \ifthu@math@style@ISO
+      \thusetup{
+        less-than-or-equal = horizontal,
+        math-ellipsis      = lower,
+      }%
+    \else
+      \ifthu@math@style@GB
+        \thusetup{
+          less-than-or-equal = slanted,
+          math-ellipsis      = centered,
+        }%
+      \fi
+    \fi
+  \fi
 }
-\normalsize
-\ifx\MakeRobust\@undefined \else
-    \MakeRobust\normalsize
+\ifthu@main@language@chinese
+  \thusetup{math-style=GB}%
+\else
+  \thusetup{math-style=TeX}%
 \fi
-\DeclareRobustCommand\small{%
-   \@setfontsize\small{10.5bp}{17.5bp}%
-   \abovedisplayskip 6bp%
-   \abovedisplayshortskip 6bp%
-   \belowdisplayshortskip 6bp%
-   \def\@listi{\leftmargin\leftmargini
-               \topsep \z@skip
-               \parsep \z@skip
-               \itemsep \z@skip}%
-   \belowdisplayskip \abovedisplayskip
+\thu@set@math@style
+\thu@option@hook{math-style}{\thu@set@math@style}
+\thu@option@hook{main-language}{%
+  \ifthu@main@language@chinese
+    \thusetup{math-style=GB}%
+  \else
+    \thusetup{math-style=TeX}%
+  \fi
 }
-\DeclareRobustCommand\footnotesize{%
-   \@setfontsize\footnotesize{9bp}{15bp}%
-   \abovedisplayskip 6bp%
-   \abovedisplayshortskip 6bp%
-   \belowdisplayshortskip 6bp%
-   \def\@listi{\leftmargin\leftmargini
-               \topsep \z@skip
-               \parsep \z@skip
-               \itemsep \z@skip}%
-   \belowdisplayskip \abovedisplayskip
+\newcommand\thu@set@unimath@leq{%
+  \ifthu@leq@horizontal
+    \ifx\@begindocumenthook\@undefined
+      \let\le\thu@save@leq
+      \let\ge\thu@save@geq
+      \let\leq\thu@save@leq
+      \let\geq\thu@save@geq
+    \else
+      \AtBeginDocument{%
+        \let\le\thu@save@leq
+        \let\ge\thu@save@geq
+        \let\leq\thu@save@leq
+        \let\geq\thu@save@geq
+      }%
+    \fi
+  \else
+    \ifthu@leq@slanted
+      \ifx\@begindocumenthook\@undefined
+        \let\le\leqslant
+        \let\ge\geqslant
+        \let\leq\leqslant
+        \let\geq\geqslant
+      \else
+        \AtBeginDocument{%
+          \let\le\leqslant
+          \let\ge\geqslant
+          \let\leq\leqslant
+          \let\geq\geqslant
+        }%
+      \fi
+    \fi
+  \fi
 }
-\DeclareRobustCommand\scriptsize{\@setfontsize\scriptsize{7.5bp}{12.5bp}}
-\DeclareRobustCommand\tiny{\@setfontsize\tiny{6.5bp}{10.83bp}}
-\DeclareRobustCommand\large{\@setfontsize\large{15bp}{25bp}}
-\DeclareRobustCommand\Large{\@setfontsize\Large{18bp}{30bp}}
-\DeclareRobustCommand\LARGE{\@setfontsize\LARGE{22bp}{36.67bp}}
-\DeclareRobustCommand\huge{\@setfontsize\huge{24bp}{40bp}}
-\DeclareRobustCommand\Huge{\@setfontsize\Huge{26bp}{43.33bp}}
-\def\thu@def@fontsize#1#2{%
-  \expandafter\newcommand\csname #1\endcsname[1][1.3]{%
-    \fontsize{#2}{##1\dimexpr #2}\selectfont}}
-\thu@def@fontsize{chuhao}{42bp}
-\thu@def@fontsize{xiaochu}{36bp}
-\thu@def@fontsize{yihao}{26bp}
-\thu@def@fontsize{xiaoyi}{24bp}
-\thu@def@fontsize{erhao}{22bp}
-\thu@def@fontsize{xiaoer}{18bp}
-\thu@def@fontsize{sanhao}{16bp}
-\thu@def@fontsize{xiaosan}{15bp}
-\thu@def@fontsize{sihao}{14bp}
-\thu@def@fontsize{xiaosi}{12bp}
-\thu@def@fontsize{wuhao}{10.5bp}
-\thu@def@fontsize{xiaowu}{9bp}
-\thu@def@fontsize{liuhao}{7.5bp}
-\thu@def@fontsize{xiaoliu}{6.5bp}
-\thu@def@fontsize{qihao}{5.5bp}
-\thu@def@fontsize{bahao}{5bp}
+\newcommand\thu@set@unimath@integral@limits{%
+  \ifthu@integral@limits@true
+    \removenolimits{%
+      \int\iint\iiint\iiiint\oint\oiint\oiiint
+      \intclockwise\varointclockwise\ointctrclockwise\sumint
+      \intbar\intBar\fint\cirfnint\awint\rppolint
+      \scpolint\npolint\pointint\sqint\intlarhk\intx
+      \intcap\intcup\upint\lowint
+    }%
+  \else
+    \addnolimits{%
+      \int\iint\iiint\iiiint\oint\oiint\oiiint
+      \intclockwise\varointclockwise\ointctrclockwise\sumint
+      \intbar\intBar\fint\cirfnint\awint\rppolint
+      \scpolint\npolint\pointint\sqint\intlarhk\intx
+      \intcap\intcup\upint\lowint
+    }%
+  \fi
+}
+\newcommand\thu@set@unimath@ellipsis{%
+  \ifthu@math@ellipsis@centered
+    \DeclareRobustCommand\mathellipsis{\mathinner{\unicodecdots}}%
+  \else
+    \DeclareRobustCommand\mathellipsis{\mathinner{\unicodeellipsis}}%
+  \fi
+}
+\newcommand\thu@set@unimath@real@part{%
+  \ifthu@real@part@roman
+    \AtBeginDocument{%
+      \def\Re{\operatorname{Re}}%
+      \def\Im{\operatorname{Im}}%
+    }%
+  \else
+    \AtBeginDocument{%
+      \let\Re\thu@save@Re
+      \let\Im\thu@save@Im
+    }%
+  \fi
+}
+\newcommand\thu@set@unimath@style{%
+  \ifthu@uppercase@greek@upright
+    \unimathsetup{math-style = TeX}%
+  \else
+    \ifthu@uppercase@greek@italic
+      \unimathsetup{math-style = ISO}%
+    \fi
+  \fi
+  \ifthu@math@style@TeX
+    \unimathsetup{bold-style = TeX}%
+  \else
+    \unimathsetup{bold-style = ISO}%
+  \fi
+  \thu@set@unimath@leq
+  \thu@set@unimath@integral@limits
+  \ifthu@partial@upright
+    \unimathsetup{partial = upright}%
+  \else
+    \ifthu@partial@italic
+      \unimathsetup{partial = italic}%
+    \fi
+  \fi
+  \thu@set@unimath@ellipsis
+  \thu@set@unimath@real@part
+}
+\newcommand\thu@qed{\rule{1ex}{1ex}}
+\newcommand\thu@load@unimath{%
+  \@ifpackageloaded{unicode-math}{}{%
+    \RequirePackage{unicode-math}%
+    \AtBeginDocument{%
+      \let\thu@save@leq\leq
+      \let\thu@save@geq\geq
+      \let\thu@save@Re\Re
+      \let\thu@save@Im\Im
+    }%
+    \DeclareRobustCommand\bm[1]{{\symbfit{##1}}}%
+    \DeclareRobustCommand\boldsymbol[1]{{\symbfit{##1}}}%
+    \newcommand\square{\mdlgwhtsquare}%
+    \newcommand\blacksquare{\mdlgblksquare}%
+    \AtBeginDocument{%
+      \renewcommand\checkmark{\ensuremath{✓}}%
+    }%
+    \renewcommand\thu@qed{\ensuremath{\QED}}%
+  }%
+}
+\newcommand\thu@set@math@font@stix{%
+  \thu@set@stix@names
+  \setmathfont{\thu@font@name@stix@math}[
+    Extension    = .otf,
+    StylisticSet = \thu@xits@integral@stylistic@set,
+  ]%
+  \setmathfont{\thu@font@name@stix@math}[
+    Extension    = .otf,
+    StylisticSet = 1,
+    range        = {scr,bfscr},
+  ]%
+}
+\newcommand\thu@xits@integral@stylistic@set{%
+  \ifthu@integral@upright
+    8%
+  \fi
+}
+\newcommand\thu@set@math@font@xits{%
+  \thu@set@xits@names
+  \setmathfont{\thu@font@name@xits@math}[
+    Extension    = .otf,
+    StylisticSet = \thu@xits@integral@stylistic@set,
+  ]%
+  \setmathfont{\thu@font@name@xits@math}[
+    Extension    = .otf,
+    StylisticSet = 1,
+    range        = {cal,bfcal},
+  ]%
+}
+\newcommand\thu@libertinus@integral@stylistic@set{%
+  \ifthu@integral@slanted
+    8%
+  \fi
+}
+\newcommand\thu@set@math@font@libertinus{%
+  \thu@set@libertinus@names
+  \setmathfont{\thu@font@name@libertinus@math}[
+    Extension    = .otf,
+    StylisticSet = \thu@libertinus@integral@stylistic@set,
+  ]%
+}
+\newcommand\thu@newcm@integral@stylistic@set{%
+  \ifthu@integral@upright
+    2%
+  \fi
+}
+\newcommand\thu@set@math@font@newcm{%
+  \setmathfont{NewCMMath-Book}[
+    Extension    = .otf,
+    StylisticSet = \thu@newcm@integral@stylistic@set,
+  ]%
+  \setmathfont{NewCMMath-Book}[
+    Extension    = .otf,
+    StylisticSet = 1,
+    range        = {scr,bfscr},
+  ]%
+  \setmathrm{NewCM10}[
+    Extension      = .otf,
+    UprightFont    = *-Book,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-BookItalic,
+    BoldItalicFont = *-BoldItalic,
+  ]%
+  \setmathsf{NewCMSans10}[
+    Extension         = .otf,
+    UprightFont       = *-Book,
+    BoldFont          = *-Bold,
+    ItalicFont        = *-BookOblique,
+    BoldItalicFont    = *-BoldOblique,
+  ]%
+  \setmathtt{NewCMMono10}[
+    Extension           = .otf,
+    UprightFont         = *-Book,
+    ItalicFont          = *-BookItalic,
+    BoldFont            = *-Bold,
+    BoldItalicFont      = *-BoldOblique,
+  ]%
+}
+\newcommand\thu@set@math@font@lm{%
+  \setmathfont{latinmodern-math}[Extension=.otf]%
+  \setmathrm{lmroman10}[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-italic,
+    BoldItalicFont = *-bolditalic,
+  ]%
+  \setmathsf{lmsans10}[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-oblique,
+    BoldItalicFont = *-boldoblique,
+  ]%
+  \setmathtt{lmmonolt10}[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-oblique,
+    BoldItalicFont = *-boldoblique,
+  ]%
+}
+\newcommand\thu@set@math@font@newtx{%
+  \ifthu@font@newtx\else
+    \let\thu@save@encodingdefault\encodingdefault
+    \let\thu@save@rmdefault\rmdefault
+    \let\thu@save@sfdefault\sfdefault
+    \let\thu@save@ttdefault\ttdefault
+    \RequirePackage[T1]{fontenc}%
+    \renewcommand{\rmdefault}{ntxtlf}%
+    \renewcommand{\sfdefault}{qhv}%
+    \renewcommand{\ttdefault}{ntxtt}%
+  \fi
+  \ifthu@uppercase@greek@italic
+    \PassOptionsToPackage{slantedGreek}{newtxmath}%
+  \fi
+  \ifthu@integral@upright
+    \PassOptionsToPackage{upint}{newtxmath}%
+  \fi
+  \RequirePackage{newtxmath}
+  \let\thu@save@leq\leq
+  \let\thu@save@geq\geq
+  \ifthu@leq@slanted
+    \let\le\leqslant
+    \let\ge\geqslant
+    \let\leq\leqslant
+    \let\geq\geqslant
+  \fi
+  \ifthu@integral@limits@true
+    \let\ilimits@\displaylimits
+  \fi
+  \let\thu@save@partial\partial
+  \ifthu@partial@upright
+    \let\partial\uppartial
+  \fi
+  \ifthu@math@ellipsis@centered
+    \DeclareRobustCommand\mathellipsis{\mathinner{\cdotp\cdotp\cdotp}}%
+  \else
+    \DeclareRobustCommand\mathellipsis{\mathinner{\ldotp\ldotp\ldotp}}%
+  \fi
+  \let\thu@save@Re\Re
+  \let\thu@save@Im\Im
+  \ifthu@real@part@roman
+    \def\Re{\operatorname{Re}}%
+    \def\Im{\operatorname{Im}}%
+  \fi
+  \RequirePackage{bm}%
+  \ifthu@font@newtx\else
+    \let\encodingdefault\thu@save@encodingdefault
+    \let\rmdefault\thu@save@rmdefault
+    \let\sfdefault\thu@save@sfdefault
+    \let\ttdefault\thu@save@ttdefault
+  \fi
+  \DeclareRobustCommand\symup[1]{{\mathrm{##1}}}%
+  \DeclareRobustCommand\symbf[1]{{\bm{##1}}}%
+  \let\increment\upDelta%
+  \renewcommand\thu@qed{\openbox}%
+}
+\newcommand\thu@set@math@font{%
+  \ifthu@math@font@none\else
+    \ifthu@math@font@newtx
+      \thu@set@math@font@newtx
+    \else
+      \thu@load@unimath
+      \thu@set@unimath@style
+      \@nameuse{thu@set@math@font@\thu@math@font}%
+    \fi
+  \fi
+}
+\thu@option@hook{math-font}{\g@addto@macro\thu@setup@hook{\thu@set@math@font}}
+\newcommand\thu@set@math@font@auto{%
+  \ifthu@math@font@auto
+    \thusetup{math-font=xits}%
+  \fi
+}
+\AtBeginOfPackageFile*{siunitx}{\thu@set@math@font@auto}
+\AtEndPreamble{\thu@set@math@font@auto}
+\def\cleardoublepage{%
+  \clearpage
+  \if@twoside
+    \ifthu@output@print
+      \ifodd\c@page
+      \else
+        \thispagestyle{empty}%
+        \hbox{}%
+        \newpage
+        \if@twocolumn
+          \hbox{}\newpage
+        \fi
+      \fi
+    \fi
+  \fi
+}
+\renewcommand\frontmatter{%
+  \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{Roman}%
+}
+\renewcommand\mainmatter{%
+  \cleardoublepage
+  \@mainmattertrue
+  \pagenumbering{arabic}%
+}
+\renewcommand\backmatter{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \@mainmatterfalse
+  \thusetup{toc-depth = 0}%
+}
 \pagestyle{fancy}
 \fancypagestyle{plain}{%
   \fancyhf{}%
@@ -1138,21 +1518,41 @@
     \fi
   \endgroup
 }
-\DeclareRobustCommand\bm[1]{{\symbf{#1}}}
-\DeclareRobustCommand\boldsymbol[1]{{\symbf{#1}}}
-\newcommand\square{\mdlgwhtsquare}
-\AtBeginDocument{%
-  \renewcommand\checkmark{\ensuremath{✓}}%
-}
 \allowdisplaybreaks[4]
 \def\fps@figure{h}
 \def\fps@table{h}
-\setlength{\floatsep}{6bp}
-\setlength{\textfloatsep}{6bp}
-\setlength{\intextsep}{6bp}
+\setlength{\floatsep}{12\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength{\textfloatsep}{12\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength{\intextsep}{12\p@ \@plus 2\p@ \@minus 2\p@}
 \setlength{\@fptop}{0bp \@plus1.0fil}
 \setlength{\@fpsep}{12bp \@plus2.0fil}
 \setlength{\@fpbot}{0bp \@plus1.0fil}
+\patchcmd{\@addtocurcol}%
+  {\vskip \intextsep}%
+  {\edef\save@first@penalty{\the\lastpenalty}\unpenalty
+   \ifnum \lastpenalty = \@M  % hopefully the OR penalty
+     \unpenalty
+   \else
+     \penalty \save@first@penalty \relax % put it back
+   \fi
+   \ifnum\outputpenalty <-\@Mii
+     \addvspace\intextsep
+     \vskip\parskip
+   \else
+     \addvspace\intextsep
+   \fi}%
+  {}{\thu@patch@error{\@addtocurcol}}
+\patchcmd{\@addtocurcol}%
+  {\vskip\intextsep \ifnum\outputpenalty <-\@Mii \vskip -\parskip\fi}%
+  {\ifnum\outputpenalty <-\@Mii
+     \aftergroup\vskip\aftergroup\intextsep
+     \aftergroup\nointerlineskip
+   \else
+     \vskip\intextsep
+   \fi}%
+  {}{\thu@patch@error{\@addtocurcol}}
+\patchcmd{\@getpen}{\@M}{\@Mi}
+  {}{\thu@patch@error{\@getpen}}
 \renewcommand{\textfraction}{0.15}
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\bottomfraction}{0.65}
@@ -1202,42 +1602,52 @@
   \let\thu@equation@number@separator\thu@number@separator
 }
 \thu@option@hook{number-separator}{\thu@set@number@separator}
-\patchcmd\@floatboxreset{%
-  \normalsize
-}{%
-  \ifthu@language@chinese
-    \fontsize{11bp}{20.3bp}\selectfont
-  \else
-    \fontsize{11bp}{18.65bp}\selectfont
-  \fi
-}{}{\thu@patch@error{\@floatboxreset}}
-\AtEndOfPackageFile*{longtable}{
-  \AtBeginEnvironment{longtable}{%
-    \ifthu@language@chinese
-      \fontsize{11bp}{20.3bp}\selectfont
-    \else
-      \fontsize{11bp}{18.65bp}\selectfont
-    \fi
-  }
-}
 \DeclareCaptionFont{thu}{%
   \ifthu@degree@bachelor
     \fontsize{11bp}{15bp}\selectfont
   \else
-    \fontsize{11bp}{14.3bp}\selectfont
+    \ifthu@language@chinese
+      \fontsize{11bp}{14.3bp}\selectfont
+    \else
+      \fontsize{11bp}{12.65bp}\selectfont
+    \fi
   \fi
 }
 \captionsetup{
   font           = thu,
   labelsep       = quad,
-  aboveskip      = 6bp,
-  belowskip      = 6bp,
+  skip           = 6bp,
   figureposition = bottom,
   tableposition  = top,
 }
 \captionsetup[sub]{font=thu}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \renewcommand{\thesubtable}{(\alph{subtable})}
+\newcommand\thu@set@table@font{
+  \ifthu@language@chinese
+    \def\thu@table@font{%
+      \fontsize{11bp}{14.3bp}\selectfont
+      \renewcommand\arraystretch{1.42}%
+    }%
+  \else
+    \def\thu@table@font{%
+      \fontsize{11bp}{12.65bp}\selectfont
+      \renewcommand\arraystretch{1.47}%
+    }%
+  \fi
+}
+\thu@set@table@font
+\thu@option@hook{language}{\thu@set@table@font}
+\patchcmd\@floatboxreset{%
+  \normalsize
+}{%
+  \thu@table@font
+}{}{\thu@patch@error{\@floatboxreset}}
+\AtEndOfPackageFile*{longtable}{
+  \AtBeginEnvironment{longtable}{%
+    \thu@table@font
+  }
+}
 \heavyrulewidth=1.5bp
 \lightrulewidth=1bp
 \AtEndOfPackageFile*{threeparttable}{
@@ -1255,18 +1665,22 @@
     nameformat   = {},
     numberformat = {},
     titleformat  = {},
-    fixskip      = true,
+    fixskip      = false,
+    aftername    = \ ,
     afterindent  = true,
     lofskip      = 0pt,
     lotskip      = 0pt,
   },
   section = {
+    aftername    = \ ,
     afterindent  = true,
   },
   subsection = {
+    aftername    = \ ,
     afterindent  = true,
   },
   subsubsection = {
+    aftername    = \ ,
     afterindent  = true,
   },
   paragraph/afterindent = true,
@@ -1279,25 +1693,21 @@
         format     = \centering\sffamily\fontsize{15bp}{20bp}\selectfont,
         beforeskip = 30bp,
         afterskip  = 20bp,
-        aftername  = \quad,
       },
       section = {
         format     = \sffamily\fontsize{14bp}{18bp}\selectfont,
         beforeskip = 25bp,
         afterskip  = 12bp,
-        aftername  = \quad,
       },
       subsection = {
         format     = \sffamily\fontsize{13bp}{15bp}\selectfont,
         beforeskip = 12bp,
         afterskip  = 6bp,
-        aftername  = \quad,
       },
       subsubsection = {
         format     = \sffamily\fontsize{12bp}{14bp}\selectfont,
         beforeskip = 12bp,
         afterskip  = 6bp,
-        aftername  = \quad,
       },
     }%
     \ifthu@main@language@chinese
@@ -1323,19 +1733,15 @@
           nameformat  = {},
           titleformat = {},
           name        = {第,章},
-          aftername   = \quad,
         },
         section = {
           format     = \sffamily\fontsize{14bp}{20bp}\selectfont,
-          aftername   = \quad,
         },
         subsection = {
           format     = \sffamily\fontsize{13bp}{20bp}\selectfont,
-          aftername   = \quad,
         },
         subsubsection = {
           format     = \sffamily\fontsize{12bp}{20bp}\selectfont,
-          aftername   = \quad,
         },
       }%
     \else
@@ -1345,19 +1751,15 @@
           nameformat  = \MakeUppercase,
           titleformat = \MakeUppercase,
           name        = \chaptername\space,
-          aftername   = \space,
         },
         section = {
           format     = \sffamily\bfseries\fontsize{14bp}{20bp}\selectfont,
-          aftername   = \space,
         },
         subsection = {
           format     = \sffamily\bfseries\fontsize{13bp}{20bp}\selectfont,
-          aftername   = \space,
         },
         subsubsection = {
           format     = \sffamily\bfseries\fontsize{12bp}{20bp}\selectfont,
-          aftername   = \space,
         },
       }%
     \fi
@@ -1518,7 +1920,7 @@
     \else
       \titlecontents{chapter}
         [\z@]{\addvspace{6bp}\heiti}
-        {\contentspush{\MakeUppercase{\thecontentslabel}\space}\MakeUppercase}{\MakeUppercase}
+        {\contentspush{\MakeUppercase{\thecontentslabel}\ }\MakeUppercase}{\MakeUppercase}
         {\rmfamily\thu@leaders\thecontentspage}%
       \titlecontents{section}
         [1em]{}
@@ -2318,52 +2720,45 @@
 \newcommand{\thu@authorization@frontdate}{%
   日\ifthu@degree@bachelor\hspace{1em}\else\hspace{2em}\fi 期：}
 \newcommand\thu@copyright@page@graduate{%
-  \newgeometry{
-    vmargin = 3.8cm,
-    hmargin = 3.2cm,
-  }%
   \begingroup
     \ctexset{
       chapter = {
         format     = {\centering\sffamily\erhao},
-        beforeskip = 18bp,
-        afterskip  = 6bp,
+        beforeskip = 40bp,
+        afterskip  = 36bp,
       },
     }%
     \thu@chapter*[]{关于学位论文使用授权的说明}%
     \thispagestyle{empty}%
   \endgroup
-  \vskip 50bp%
+  \vskip 13bp%
   \begingroup
     \fontsize{14bp}{26bp}\selectfont
     本人完全了解清华大学有关保留、使用学位论文的规定，即：\par
     清华大学拥有在著作权法规定范围内学位论文的使用权，其中包括：%
-    （1）已获学位的研究生必须按学校规定提交学位论文，%
-    学校可以采用影印、缩印或其他复制手段保存研究生上交的学位论文；%
+    （1）\nobreak 已获学位的研究生必须按学校规定提交学位论文，%
+    学校可以采用影印、缩印或其他复制手段保存研究生上交的学位论文；\allowbreak
     （2）\nobreak 为教学和科研目的，学校可以将公开的学位论文作为资料在图书馆、资料室等场所供校内师生阅读，%
-    或在校园网上供校内师生浏览部分内容；%
+    或在校园网上供校内师生浏览部分内容；\allowbreak
     \ifthu@degree@doctor
-      （3）根据《中华人民共和国学位条例暂行实施办法》及上级教育主管部门具体要求，向国家图书馆报送相应的学位论文。%
+      （3）\nobreak 根据《中华人民共和国学位条例暂行实施办法》及上级教育主管部门具体要求，向国家图书馆报送相应的学位论文。%
     \else
-      （3）按照上级教育主管部门督导、抽查等要求，报送相应的学位论文。%
+      （3）\nobreak 按照上级教育主管部门督导、抽查等要求，报送相应的学位论文。%
     \fi
     \par
     本人保证遵守上述规定。\par
-    \vskip 6bp%
-    \textbf{（保密的论文在解密后遵守此规定）}\par
   \endgroup
-  \vskip1.2cm%
+  \vskip 33bp%
   \begingroup
-    \noindent\xiaosi
-    \hspace*{1.5cm}%
-    作者签名：\thu@underline[7em]\relax\hfill
-    导师签名：\thu@underline[7em]\relax\hspace*{1cm}\\[3pt]%
-    \hspace*{1.5cm}%
-    日\hspace{2em}期：\thu@underline[7em]\relax\hfill
-    日\hspace{2em}期：\thu@underline[7em]\relax\hspace*{1cm}%
+    \fontsize{12bp}{23.4bp}\selectfont
+    \parindent\z@
+    \leftskip 43bp%
+    作者签名：\hspace{4bp}\thu@underline[7em]{}\hspace{47bp}%
+    导师签名：\hspace{4bp}\thu@underline[7em]{}\par
+    \vskip 6bp%
+    日\hspace{2em}期：\hspace{4bp}\thu@underline[7em]{}\hspace{47bp}%
+    日\hspace{2em}期：\hspace{4bp}\thu@underline[7em]{}\par
   \endgroup
-  \clearpage
-  \restoregeometry
 }
 \newcommand\thu@copyright@page@bachelor{%
   \begingroup
@@ -2512,10 +2907,11 @@
   statement-page-style = {
     name = statement@page@style,
     choices = {
+      auto,
       empty,
       plain,
     },
-    default = empty,
+    default = auto,
   },
   statement-page-number = {
     name = statement@page@number,
@@ -2556,6 +2952,21 @@
     \fi
   }%
   \kvsetkeys{thu@statement}{#1}%
+  \ifthu@statement@page@style@auto
+    \ifx\thu@statement@file\@empty
+      \ifthu@degree@bachelor
+        \thusetup{statement-page-style = empty}%
+      \else
+        \thusetup{statement-page-style = plain}%
+      \fi
+    \else
+      \ifthu@degree@bachelor
+        \thusetup{statement-page-style = plain}%
+      \else
+        \thusetup{statement-page-style = empty}%
+      \fi
+    \fi
+  \fi
   \ifx\thu@statement@file\@empty
     \thusetup{language=chinese}%
     \begingroup
@@ -2568,9 +2979,7 @@
       \fi
       \thu@chapter*{\thu@statement@name}%
     \endgroup
-    \ifthu@degree@bachelor
-      \thispagestyle{\thu@statement@page@style}%
-    \fi
+    \thispagestyle{\thu@statement@page@style}%
     \thu@statement@text\par
     \ifthu@degree@graduate
       \vskip 2cm%
@@ -2585,9 +2994,7 @@
       \markboth{\thu@statement@name}{}%
       \thu@phantomsection
       \addcontentsline{toc}{chapter}{\thu@statement@name}%
-      \ifthu@degree@bachelor\else
-        \thispagestyle{empty}%
-      \fi
+      \thispagestyle{\thu@statement@page@style}%
     }]{\thu@statement@file}%
   \fi
   \ifthu@degree@bachelor
@@ -2659,16 +3066,40 @@
   \@namedef{bibstyle@thuthesis-author-year}{\citestyle{author-year}}
   \@namedef{bibstyle@thuthesis-bachelor}{\citestyle{super}}
   \@namedef{bibstyle@thuthesis-inline}{\citestyle{inline}}
-  \renewcommand\NAT@citesuper[3]{\ifNAT@swa
-    \if*#2*\else#2\NAT@spacechar\fi
-    % \unskip\kern\p@\textsuperscript{\NAT@@open#1\NAT@@close}%
-    %  \if*#3*\else\NAT@spacechar#3\fi\else #1\fi\endgroup}
-    \unskip\kern\p@\textsuperscript{\NAT@@open#1\NAT@@close\if*#3*\else#3\fi}%
-    \else #1\fi\endgroup}
-  \renewcommand\NAT@citenum%
-      [3]{\ifNAT@swa\NAT@@open\if*#2*\else#2\NAT@spacechar\fi
-          % #1\if*#3*\else\NAT@cmt#3\fi\NAT@@close\else#1\fi\endgroup}
-          #1\NAT@@close\textsuperscript{\if*#3*\else#3\fi}\else#1\fi\endgroup}
+  \renewcommand\NAT@citesuper[3]{%
+    \ifNAT@swa
+      \if*#2*\else
+        #2\NAT@spacechar
+      \fi
+      % \unskip\kern\p@\textsuperscript{\NAT@@open#1\NAT@@close}%
+      %  \if*#3*\else\NAT@spacechar#3\fi\else #1\fi\endgroup}
+      \unskip\kern\p@
+      \textsuperscript{%
+        \NAT@@open#1\NAT@@close
+        \if*#3*\else#3\fi
+      }%
+      \kern\p@
+    \else
+      #1%
+    \fi
+    \endgroup
+  }
+  \renewcommand\NAT@citenum[3]{%
+    \ifNAT@swa
+      \NAT@@open
+      \if*#2*\else
+        #2\NAT@spacechar
+      \fi
+      % #1\if*#3*\else\NAT@cmt#3\fi\NAT@@close
+      #1\NAT@@close
+      \if*#3*\else
+        \textsuperscript{#3}%
+      \fi
+    \else
+      #1%
+    \fi
+    \endgroup
+  }
   \def\NAT@citexnum[#1][#2]#3{%
     \NAT@reset@parser
     \NAT@sort@cites{#3}%
@@ -2749,8 +3180,11 @@
           % }{}%
           \NAT@mbox{\NAT@@close}%
           \@ifnum{\NAT@ctype=\z@}{%
-            \if*#2*\else\textsuperscript{#2}\fi
+            \if*#2*\else
+              \textsuperscript{#2}%
+            \fi
           }{}%
+          \NAT@super@kern
         \fi
     }{#1}{#2}%
   }%
@@ -3277,12 +3711,12 @@
   }{%
     \popQED\endtrivlist\@endpefalse
   }
-  \renewcommand\qedsymbol{\ensuremath{\QED}}
+  \renewcommand\qedsymbol{\thu@qed}
 }
 \AtEndOfPackageFile*{ntheorem}{%
   \theorembodyfont{\normalfont}%
   \theoremheaderfont{\normalfont\sffamily}%
-  \theoremsymbol{\ensuremath{\QED}}%
+  \theoremsymbol{\thu@qed}%
   \newtheorem*{proof}{\thu@proof@name}%
   \theoremstyle{plain}%
   \theoremsymbol{}%
@@ -3435,15 +3869,6 @@
 \DeclareRobustCommand\env{\textsf}
 \DeclareRobustCommand\pkg{\textsf}
 \DeclareRobustCommand\cls{\textsf}
-
-%change the figure format
-% \renewcommand{\thefigure}{\thechapter-\arabic{figure}} 
-\captionsetup[figure]{labelfont=normalfont,textfont={normalfont},labelsep=space}
-
-% \renewcommand{\thetable}{\thechapter-\arabic{table}} 
-\captionsetup[table]{labelfont=normalfont,textfont={normalfont},labelsep=space}
-
-
 \sloppy
 \endinput
 %%

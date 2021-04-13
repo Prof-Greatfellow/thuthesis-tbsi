@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  9 MAR 2021 11:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.7)  13 APR 2021 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,7 +6,7 @@ entering extended mode
 (./main.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03> (./thuthesis.cls
-Document Class: thuthesis 2020/10/14 7.1.0 Tsinghua University Thesis Template
+Document Class: thuthesis 2021/04/03 7.2.2 Tsinghua University Thesis Template
 (d:/TexLive/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
@@ -322,20 +322,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(d:/TexLive/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math.sty
-Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
-
-(d:/TexLive/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.s
-ty
-Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
-TeX
-\g__um_fam_int=\count292
-\g__um_fonts_used_int=\count293
-\l__um_primecount_int=\count294
-\g__um_primekern_muskip=\muskip18
-
-(d:/TexLive/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
-ex))) (d:/TexLive/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/TexLive/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
@@ -372,11 +359,11 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen256
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count295
-\c@continuedfloat=\count296
+\c@caption@flags=\count292
+\c@continuedfloat=\count293
 )
-\c@subfigure=\count297
-\c@subtable=\count298
+\c@subfigure=\count294
+\c@subtable=\count295
 )
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
@@ -386,15 +373,15 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count299
-\calc@Bcount=\count300
+\calc@Acount=\count296
+\calc@Bcount=\count297
 \calc@Adimen=\dimen257
 \calc@Bdimen=\dimen258
 \calc@Askip=\skip70
 \calc@Bskip=\skip71
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count301
+\calc@Ccount=\count298
 \calc@Cskip=\skip72
 )
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/eso-pic/eso-pic.sty
@@ -426,9 +413,9 @@ File: ppxetex.def 2020/01/28 v0.5q Pdfpages driver for XeTeX (AM)
 )
 \AM@pagebox=\box52
 \AM@global@opts=\toks22
-\AM@pagecnt=\count302
+\AM@pagecnt=\count299
 \AM@toc@title=\toks23
-\c@AM@survey=\count303
+\c@AM@survey=\count300
 \AM@templatesizebox=\box53
 )
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -437,8 +424,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen263
 \enit@toks=\toks24
 \enit@inbox=\box54
-\enit@count@id=\count304
-\enitdp@description=\count305
+\enit@count@id=\count301
+\enitdp@description=\count302
 )
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -450,8 +437,8 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks25
 \footnotemargin=\dimen264
-\c@pp@next@reset=\count306
-\c@@fnserial=\count307
+\c@pp@next@reset=\count303
+\c@@fnserial=\count304
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -470,7 +457,7 @@ Package: xeCJKfntef 2020/10/19 v3.8.6 xeCJK font effect
 \UL@skip=\skip74
 \UL@hook=\toks26
 \UL@height=\dimen265
-\UL@pe=\count308
+\UL@pe=\count305
 \UL@pixel=\dimen266
 \ULC@box=\box57
 Package: ulem 2019/11/18
@@ -517,123 +504,186 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen281
 \cmidrulekern=\dimen282
 \defaultaddspace=\dimen283
-\@cmidla=\count309
-\@cmidlb=\count310
+\@cmidla=\count306
+\@cmidlb=\count307
 \@aboverulesep=\dimen284
 \@belowrulesep=\dimen285
-\@thisruleclass=\count311
-\@lastruleclass=\count312
+\@thisruleclass=\count308
+\@lastruleclass=\count309
 \@thisrulewidth=\dimen286
 )
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip19
+\Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 7
-19.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line
- 719.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 
-719.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(1)/m/n on input line 719.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(1)/b/n on input line 719.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/m/n on input line 719
-.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/b/n on input line 719
-.
-LaTeX Info: Redefining \mathellipsis on input line 755.
-LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 797.
-
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular(1)/m/n on input lin
-e 797.
-LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 797.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular(1)/b/n on input li
-ne 797.
-LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 797.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular(2)/m/n on input li
-ne 797.
-LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 797.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular(2)/b/n on input li
-ne 797.
-LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 7
-97.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/m/n on input li
-ne 797.
-LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 797
-.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/b/n on input li
-ne 797.
-\sym__um_fam1=\mathgroup4
-LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
-(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/m
-/n on input line 797.
-LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
-(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/b
-/n on input line 797.
 LaTeX Info: The control sequence `\normalsize' is already robust on input line 
-939.
-LaTeX Info: Redefining \small on input line 941.
-LaTeX Info: Redefining \footnotesize on input line 952.
-LaTeX Info: Redefining \scriptsize on input line 963.
-LaTeX Info: Redefining \tiny on input line 964.
-LaTeX Info: Redefining \large on input line 965.
-LaTeX Info: Redefining \Large on input line 966.
-LaTeX Info: Redefining \LARGE on input line 967.
-LaTeX Info: Redefining \huge on input line 968.
-LaTeX Info: Redefining \Huge on input line 969.
-LaTeX Info: Redefining \boldsymbol on input line 1142.
+594.
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+
+
+Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;mapping=tex
+-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
+tex-text;"
+
+
+Package fontspec Info: Courier New scale = 1.057733558623334.
+
+
+Package fontspec Info: Courier New scale = 1.057733558623334.
+
+
+Package fontspec Info: Courier New/B scale = 1.008809074804275.
+
+
+Package fontspec Info: Courier New/I scale = 1.057733558623334.
+
+
+Package fontspec Info: Courier New/BI scale = 1.008809074804275.
+
+
+Package fontspec Info: Font family 'CourierNew(0)' created for font 'Courier
+(fontspec)             New' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Scale
+(fontspec)             = MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.057733558623334]"Courier
+(fontspec)             New/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.008809074804275]"Courier
+(fontspec)             New/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.057733558623334]"Courier
+(fontspec)             New/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.008809074804275]"Courier
+(fontspec)             New/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Could not resolve font "KaiTi/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "SimSun/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "SimSun/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family 'SimSun(0)' created for font 'SimSun' with
+(fontspec)             options
+(fontspec)             [Script={CJK},AutoFakeBold={3},ItalicFont={KaiTi}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;embolden=3;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+
 \thu@stretch@box=\box63
 \thu@pad@box=\box64
-\c@thu@csl@count=\count313
-\enitdp@thu@denotation=\count314
-\c@achievementsi=\count315
-\enitdp@achievements=\count316
+\c@thu@csl@count=\count310
+\enitdp@thu@denotation=\count311
+\c@achievementsi=\count312
+\enitdp@achievements=\count313
 ) (./thusetup.tex
-LaTeX Info: Redefining \mathellipsis on input line 107.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/XITSMath-Regular(6)/m
-/n on input line 107.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/XITSMath-Regular(1)/b/n --> TU/XITSMath-Regular(6)/b
-/n on input line 107.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  TU/XITSMath-Regular(2)/m/n --> TU/XITSMath-Regular(7)/m
-/n on input line 107.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  TU/XITSMath-Regular(2)/b/n --> TU/XITSMath-Regular(7)/b
-/n on input line 107.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  TU/XITSMath-Regular(3)/m/n --> TU/XITSMath-Regular(8)/m
-/n on input line 107.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  TU/XITSMath-Regular(3)/b/n --> TU/XITSMath-Regular(8)/b
-/n on input line 107.
-\sym__um_fam2=\mathgroup5
-LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
-(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/m
-/n on input line 107.
-LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
-(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/b
-/n on input line 107.
+
+Package fontspec Info: Courier New scale = 1.057733558623334.
+
 
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
@@ -641,11 +691,209 @@ Package: threeparttable 2003/06/13  v 3.0
 ) (d:/TexLive/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip80
-\multirow@cntb=\count317
+\multirow@cntb=\count314
 \multirow@dima=\skip81
 \bigstrutjot=\dimen287
 )
-(d:/TexLive/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx.sty
+(d:/TexLive/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+
+(d:/TexLive/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.s
+ty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
+TeX
+\g__um_fam_int=\count315
+\g__um_fonts_used_int=\count316
+\l__um_primecount_int=\count317
+\g__um_primekern_muskip=\muskip19
+
+(d:/TexLive/texlive/2020/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
+ex)))
+LaTeX Info: Redefining \boldsymbol on input line 129.
+LaTeX Info: Redefining \mathellipsis on input line 129.
+
+Package fontspec Info: Font family 'XITSMath-Regular(0)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,Extension={.otf},StylisticSet={}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[XITSMath-Regular.otf]/OT:script=math;language=dflt;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'XITSMath-Regular(1)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;langu
+age=dflt;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;language=d
+flt;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+s
+sty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 129.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular(1)/m/n on input lin
+e 129.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular(1)/b/n on input li
+ne 129.
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: XITSMath-Regular scale = 1.0001.
+
+
+Package fontspec Info: Font family 'XITSMath-Regular(2)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={},ScaleAgain=1.0001,FontAdjustment={\fon
+tdimen
+(fontspec)             8\font =6.9861pt\relax \fontdimen 9\font
+(fontspec)             =5.7816pt\relax \fontdimen 10\font =5.7816pt\relax
+(fontspec)             \fontdimen 11\font =8.4315pt\relax \fontdimen 12\font
+(fontspec)             =5.7816pt\relax \fontdimen 13\font =4.818pt\relax
+(fontspec)             \fontdimen 14\font =4.818pt\relax \fontdimen 15\font
+(fontspec)             =3.31238pt\relax \fontdimen 16\font =3.01125pt\relax
+(fontspec)             \fontdimen 17\font =3.01125pt\relax \fontdimen 18\font
+(fontspec)             =4.51688pt\relax \fontdimen 19\font =0.60225pt\relax
+(fontspec)             \fontdimen 22\font =3.01125pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[1.0001]"[XITSMath-Regular.otf]/OT:script=
+math;language=dflt;"<8.130375-10.539375>s*[1.0001]"[XITSMath-Regular.otf]/OT:sc
+ript=math;language=dflt;+ssty=0;"<-8.130375>s*[1.0001]"[XITSMath-Regular.otf]/O
+T:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.9861pt\relax \fontdimen 9\font
+(fontspec)             =5.7816pt\relax \fontdimen 10\font =5.7816pt\relax
+(fontspec)             \fontdimen 11\font =8.4315pt\relax \fontdimen 12\font
+(fontspec)             =5.7816pt\relax \fontdimen 13\font =4.818pt\relax
+(fontspec)             \fontdimen 14\font =4.818pt\relax \fontdimen 15\font
+(fontspec)             =3.31238pt\relax \fontdimen 16\font =3.01125pt\relax
+(fontspec)             \fontdimen 17\font =3.01125pt\relax \fontdimen 18\font
+(fontspec)             =4.51688pt\relax \fontdimen 19\font =0.60225pt\relax
+(fontspec)             \fontdimen 22\font =3.01125pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular(2)/m/n on input li
+ne 129.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular(2)/b/n on input li
+ne 129.
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: XITSMath-Regular scale = 0.9999.
+
+
+Package fontspec Info: Font family 'XITSMath-Regular(3)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={},ScaleAgain=0.9999,FontAdjustment={\fon
+tdimen
+(fontspec)             8\font =0.79497pt\relax \fontdimen 9\font
+(fontspec)             =1.80675pt\relax \fontdimen 10\font =1.80675pt\relax
+(fontspec)             \fontdimen 11\font =3.6135pt\relax \fontdimen 12\font
+(fontspec)             =7.227pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[0.9999]"[XITSMath-Regular.otf]/OT:script=
+math;language=dflt;"<8.130375-10.539375>s*[0.9999]"[XITSMath-Regular.otf]/OT:sc
+ript=math;language=dflt;+ssty=0;"<-8.130375>s*[0.9999]"[XITSMath-Regular.otf]/O
+T:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.79497pt\relax \fontdimen 9\font
+(fontspec)             =1.80675pt\relax \fontdimen 10\font =1.80675pt\relax
+(fontspec)             \fontdimen 11\font =3.6135pt\relax \fontdimen 12\font
+(fontspec)             =7.227pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+29.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/m/n on input li
+ne 129.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 129
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular(3)/b/n on input li
+ne 129.
+
+Package fontspec Info: Font family 'XITSMath-Regular(4)' created for font
+(fontspec)             'XITSMath-Regular' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular,Style=MathScriptS
+cript}},Extension={.otf},StylisticSet={1}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;langu
+age=dflt;+ss01;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;lang
+uage=dflt;+ss01;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;lang
+uage=dflt;+ss01;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+\sym__um_fam1=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
+(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/m
+/n on input line 129.
+LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
+(Font)                  TU/XITSMath-Regular(4)/m/n --> TU/XITSMath-Regular(4)/b
+/n on input line 129.
+ (d:/TexLive/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 \l__siunitx_tmp_box=\box66
 \l__siunitx_tmp_dim=\dimen288
@@ -728,35 +976,296 @@ Package: bibunits 2004/05/12 v2.4 Multiple bibliographies in one document.
 \@bibunitaux=\write3
 \@bibunitauxcnt=\count348
 )
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math/B scale = 0.979449911266943.
+
+
+Package fontspec Info: Font family 'XITSMath(0)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,Scale={MatchUppercase}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.000162657011857]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.979449911266943]"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
 LaTeX Font Info:    Font shape `TU/XITSMath(0)/m/n' will be
 (Font)              scaled to size 12.04701pt on input line 162.
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math/B scale = 0.979449911266943.
+
+
+Package fontspec Info: Font family 'XITSMath(1)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITS
+(fontspec)             Math,Style=MathScript},{Size=-8.130375,Font=XITS
+(fontspec)             Math,Style=MathScriptScript}},Scale={MatchUppercase}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[1.000162657011857]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;"<8.130375-10.539375>s
+*[1.000162657011857]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-8.130375>s*
+[1.000162657011857]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.979449911266943]"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
 (Font)              scaled to size 12.04701pt on input line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/XITSMath-Regular(6)/m/n --> TU/XITSMath(1)/m/n on in
+(Font)                  TU/XITSMath-Regular(1)/m/n --> TU/XITSMath(1)/m/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/XITSMath-Regular(6)/b/n --> TU/XITSMath(1)/b/n on in
+(Font)                  TU/XITSMath-Regular(1)/b/n --> TU/XITSMath(1)/b/n on in
 put line 162.
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000262673277558.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000262673277558.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000262673277558.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000262673277558.
+
+
+Package fontspec Info: XITS Math/B scale = 0.979449911266943.
+
+
+Package fontspec Info: XITS Math/B scale = 0.9795478562580697.
+
+
+Package fontspec Info: Font family 'XITSMath(2)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITS
+(fontspec)             Math,Style=MathScript},{Size=-8.130375,Font=XITS
+(fontspec)             Math,Style=MathScriptScript}},Scale={MatchUppercase},Sca
+leAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =6.98727pt\relax \fontdimen 9\font
+(fontspec)             =5.78256pt\relax \fontdimen 10\font =5.78256pt\relax
+(fontspec)             \fontdimen 11\font =8.4329pt\relax \fontdimen 12\font
+(fontspec)             =5.78256pt\relax \fontdimen 13\font =4.8188pt\relax
+(fontspec)             \fontdimen 14\font =4.8188pt\relax \fontdimen 15\font
+(fontspec)             =3.31293pt\relax \fontdimen 16\font =3.01175pt\relax
+(fontspec)             \fontdimen 17\font =3.01175pt\relax \fontdimen 18\font
+(fontspec)             =4.51762pt\relax \fontdimen 19\font =0.60236pt\relax
+(fontspec)             \fontdimen 22\font =3.01175pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[1.000262673277558]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;"<8.130375-10.539375>s
+*[1.000262673277558]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-8.130375>s*
+[1.000262673277558]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.98727pt\relax \fontdimen 9\font
+(fontspec)             =5.78256pt\relax \fontdimen 10\font =5.78256pt\relax
+(fontspec)             \fontdimen 11\font =8.4329pt\relax \fontdimen 12\font
+(fontspec)             =5.78256pt\relax \fontdimen 13\font =4.8188pt\relax
+(fontspec)             \fontdimen 14\font =4.8188pt\relax \fontdimen 15\font
+(fontspec)             =3.31293pt\relax \fontdimen 16\font =3.01175pt\relax
+(fontspec)             \fontdimen 17\font =3.01175pt\relax \fontdimen 18\font
+(fontspec)             =4.51762pt\relax \fontdimen 19\font =0.60236pt\relax
+(fontspec)             \fontdimen 22\font =3.01175pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9795478562580697]"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.98727pt\relax \fontdimen 9\font
+(fontspec)             =5.78256pt\relax \fontdimen 10\font =5.78256pt\relax
+(fontspec)             \fontdimen 11\font =8.4329pt\relax \fontdimen 12\font
+(fontspec)             =5.78256pt\relax \fontdimen 13\font =4.8188pt\relax
+(fontspec)             \fontdimen 14\font =4.8188pt\relax \fontdimen 15\font
+(fontspec)             =3.31293pt\relax \fontdimen 16\font =3.01175pt\relax
+(fontspec)             \fontdimen 17\font =3.01175pt\relax \fontdimen 18\font
+(fontspec)             =4.51762pt\relax \fontdimen 19\font =0.60236pt\relax
+(fontspec)             \fontdimen 22\font =3.01175pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  TU/XITSMath-Regular(7)/m/n --> TU/XITSMath(2)/m/n on in
+(Font)                  TU/XITSMath-Regular(2)/m/n --> TU/XITSMath(2)/m/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  TU/XITSMath-Regular(7)/b/n --> TU/XITSMath(2)/b/n on in
+(Font)                  TU/XITSMath-Regular(2)/b/n --> TU/XITSMath(2)/b/n on in
 put line 162.
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000062640746156.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000062640746156.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000062640746156.
+
+
+Package fontspec Info: XITS Math scale = 1.000162657011857.
+
+
+Package fontspec Info: XITS Math scale = 1.000062640746156.
+
+
+Package fontspec Info: XITS Math/B scale = 0.979449911266943.
+
+
+Package fontspec Info: XITS Math/B scale = 0.9793519662758163.
+
+
+Package fontspec Info: Font family 'XITSMath(3)' created for font 'XITS Math'
+(fontspec)             with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITS
+(fontspec)             Math,Style=MathScript},{Size=-8.130375,Font=XITS
+(fontspec)             Math,Style=MathScriptScript}},Scale={MatchUppercase},Sca
+leAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.7951pt\relax \fontdimen 9\font
+(fontspec)             =1.80705pt\relax \fontdimen 10\font =1.80705pt\relax
+(fontspec)             \fontdimen 11\font =3.6141pt\relax \fontdimen 12\font
+(fontspec)             =7.22821pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[1.000062640746156]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;"<8.130375-10.539375>s
+*[1.000062640746156]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-8.130375>s*
+[1.000062640746156]"XITS
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.7951pt\relax \fontdimen 9\font
+(fontspec)             =1.80705pt\relax \fontdimen 10\font =1.80705pt\relax
+(fontspec)             \fontdimen 11\font =3.6141pt\relax \fontdimen 12\font
+(fontspec)             =7.22821pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9793519662758163]"XITS
+(fontspec)             Math/B/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.7951pt\relax \fontdimen 9\font
+(fontspec)             =1.80705pt\relax \fontdimen 10\font =1.80705pt\relax
+(fontspec)             \fontdimen 11\font =3.6141pt\relax \fontdimen 12\font
+(fontspec)             =7.22821pt\relax \fontdimen 13\font =0pt\relax 
+
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  TU/XITSMath-Regular(8)/m/n --> TU/XITSMath(3)/m/n on in
+(Font)                  TU/XITSMath-Regular(3)/m/n --> TU/XITSMath(3)/m/n on in
 put line 162.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  TU/XITSMath-Regular(8)/b/n --> TU/XITSMath(3)/b/n on in
+(Font)                  TU/XITSMath-Regular(3)/b/n --> TU/XITSMath(3)/b/n on in
 put line 162.
+
+Package fontspec Info: Latin Modern Math scale = 0.9694110533451792.
+
+
+Package fontspec Info: Could not resolve font "Latin Modern Math/B" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Latin Modern Math scale = 0.9694110533451792.
+
+
+Package fontspec Info: Latin Modern Math scale = 0.9694110533451792.
+
+
+Package fontspec Info: Latin Modern Math scale = 0.9694110533451792.
+
+
+Package fontspec Info: Font family 'LatinModernMath(0)' created for font
+(fontspec)             'Latin Modern Math' with options
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=Latin
+(fontspec)             Modern
+(fontspec)             Math,Style=MathScript},{Size=-8.130375,Font=Latin
+(fontspec)             Modern
+(fontspec)             Math,Style=MathScriptScript}},Scale={MatchUppercase}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <10.539375->s*[0.9694110533451792]"Latin Modern
+(fontspec)             Math/OT:script=math;language=dflt;"<8.130375-10.539375>s
+*[0.9694110533451792]"Latin
+(fontspec)             Modern
+(fontspec)             Math/OT:script=math;language=dflt;+ssty=0;"<-8.130375>s*
+[0.9694110533451792]"Latin
+(fontspec)             Modern Math/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 11.67648pt on input line 165.
-\sym__um_fam3=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `normal'
+\sym__um_fam2=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/LatinModernMath(0)/m/n --> TU/LatinModernMath(0)/m/n
  on input line 165.
-LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `bold'
+LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/LatinModernMath(0)/m/n --> TU/LatinModernMath(0)/b/n
  on input line 165.
 
@@ -968,6 +1477,26 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 )
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  TU/XITSMath(1)/m/n --> TU/TimesNewRoman(0)/m/n on input
+ line 16.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 16.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+16.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 16.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 16.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/m/n on input line 16.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(0)/b/n on input line 16.
+
+
 (d:/TexLive/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
@@ -1016,11 +1545,11 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 8.75737pt on input line 16.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 7.00589pt on input line 16.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 12.74046pt on input line 16.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.55534pt on input line 16.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 7.64427pt on input line 16.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
@@ -1054,6 +1583,55 @@ LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+
+Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "SimHei/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
+(fontspec)             options [Script={CJK},AutoFakeBold={3}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;embolden=3;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
 (Font)              scaled to size 16.06268pt on input line 20.
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
@@ -1072,11 +1650,11 @@ LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 14.05334pt on input line 20.
 LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 10.54001pt on input line 20.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 16.98729pt on input line 20.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 14.86386pt on input line 20.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 11.14789pt on input line 20.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 15.56865pt on input line 20.
@@ -1088,7 +1666,65 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 
 
 
-] [2
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(156.49014pt, 532.06656pt, 156.49014pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=540.60239pt
+* \textheight=532.06656pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=61.45789pt
+* \headheight=14.22636pt
+* \headsep=8.5359pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=56.9055pt
+* \marginparsep=14.22636pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FangSong(1)' created for font 'FangSong'
+(fontspec)             with options
+(fontspec)             [Script={CJK},Script={CJK},RawFeature={vertical}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;vertical;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+ [2
+
 
 
 
@@ -1137,15 +1773,18 @@ LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 15.05716pt on input line 20.
 LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 9.03429pt on input line 20.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 15.92557pt on input line 20.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.55533pt on input line 20.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 14.59561pt on input line 20.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 8.75735pt on input line 20.
  [3
+
+
+
 
 ] (./data/committee.tex [4
 
@@ -1200,61 +1839,63 @@ File: figures/scan-copyright.pdf Graphic file (type pdf)
  (./data/denotation.tex [5
 
 
-]) [6
+] [6
 
+
+]) [7] [8
 
 ] (./data/chap01.tex
 Chapter 1
 File: figures//fig1.pdf Graphic file (type pdf)
 <use figures//fig1.pdf>
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 14
-.
-LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
-(Font)              scaled to size 11.04309pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
-(Font)              scaled to size 7.73013pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
-(Font)              scaled to size 5.52153pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
-(Font)              scaled to size 11.0441pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
-(Font)              scaled to size 7.73083pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
-(Font)              scaled to size 5.52203pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
-(Font)              scaled to size 11.04192pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
-(Font)              scaled to size 7.7293pt on input line 14.
-LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
-(Font)              scaled to size 5.52095pt on input line 14.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
-(Font)              scaled to size 11.67876pt on input line 14.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
-(Font)              scaled to size 8.17508pt on input line 14.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
-(Font)              scaled to size 5.83937pt on input line 14.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
-(Font)              scaled to size 10.70345pt on input line 14.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
-(Font)              scaled to size 7.49237pt on input line 14.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
-(Font)              scaled to size 5.35172pt on input line 14.
 [1
-
 
 ]) (./data/chap02.tex [2]
 Chapter 2
-LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
-(Font)              scaled to size 12.74046pt on input line 8.
 File: example-image-a.pdf Graphic file (type pdf)
 <use example-image-a.pdf>
 File: example-image-a.pdf Graphic file (type pdf)
 <use example-image-a.pdf>
 File: example-image-b.pdf Graphic file (type pdf)
 <use example-image-b.pdf>
-[3
 
-]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 47
+.
+LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
+(Font)              scaled to size 11.04309pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
+(Font)              scaled to size 7.73013pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
+(Font)              scaled to size 5.52153pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
+(Font)              scaled to size 11.0441pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
+(Font)              scaled to size 7.73083pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
+(Font)              scaled to size 5.52203pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
+(Font)              scaled to size 11.04192pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
+(Font)              scaled to size 7.7293pt on input line 47.
+LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
+(Font)              scaled to size 5.52095pt on input line 47.
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
+(Font)              scaled to size 11.67876pt on input line 47.
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
+(Font)              scaled to size 8.17508pt on input line 47.
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
+(Font)              scaled to size 5.83937pt on input line 47.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
+(Font)              scaled to size 10.70345pt on input line 47.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
+(Font)              scaled to size 7.49237pt on input line 47.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
+(Font)              scaled to size 5.35172pt on input line 47.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
 (Font)              scaled to size 7.00117pt on input line 81.
 LaTeX Font Info:    Font shape `TU/XITSMath(1)/m/n' will be
@@ -1267,15 +1908,20 @@ LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 7.00043pt on input line 81.
 LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 5.0003pt on input line 81.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 7.40417pt on input line 81.
-LaTeX Font Info:    Font shape `TU/CourierNew(1)/m/n' will be
+LaTeX Font Info:    Font shape `TU/CourierNew(0)/m/n' will be
 (Font)              scaled to size 5.2887pt on input line 81.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 6.78584pt on input line 81.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(0)/m/n' will be
 (Font)              scaled to size 4.84703pt on input line 81.
-) (./data/chap03.tex [4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./data/chap03.tex [3
+
+] [4]
 Chapter 3
 [5
 
@@ -1328,16 +1974,22 @@ File: figures/scan-statement.pdf Graphic file (type pdf)
 [16
 
 ] (./main.aux (./bu.aux))
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3BD9AF15B696B1775D228C2F7CF268F7;4810.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 7950DA11A0E538962057EA0B52EEA545;4899
+(rerunfilecheck)             After:  C873BFDBA247CCB4202E91E41339DEDF;4891.
  ) 
 Here is how much of TeX's memory you used:
- 29024 strings out of 477401
- 592380 string characters out of 5835146
- 1323694 words of memory out of 5000000
- 47888 multiletter control sequences out of 15000+600000
- 548899 words of font info for 287 fonts, out of 8000000 for 9000
+ 29053 strings out of 477401
+ 591494 string characters out of 5835146
+ 1308568 words of memory out of 5000000
+ 47931 multiletter control sequences out of 15000+600000
+ 548738 words of font info for 274 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 109i,17n,134p,973b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 109i,17n,132p,1406b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (30 pages).
+Output written on main.pdf (32 pages).
